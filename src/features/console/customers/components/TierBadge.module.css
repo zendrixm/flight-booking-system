@@ -1,0 +1,30 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.platinum {
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.gold {
+  background: var(--color-brass);
+  color: var(--color-midnight);
+}
+
+.silver {
+  background: rgb(var(--rgb-midnight) / 0.1);
+}
+
+.member {
+  border: 1px solid var(--border-control);
+  color: rgb(var(--rgb-midnight) / 0.8);
+}
