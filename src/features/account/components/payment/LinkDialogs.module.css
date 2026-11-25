@@ -1,0 +1,328 @@
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.facts {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 14px var(--space-4);
+  border-radius: 14px;
+  background: var(--surface-quiet);
+  font-size: 13px;
+  line-height: 19px;
+  list-style: none;
+}
+
+.facts li {
+  display: flex;
+  gap: 10px;
+}
+
+.factIcon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.waiting {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px;
+  border-radius: var(--radius-card);
+  background: rgb(var(--rgb-brass) / 0.12);
+}
+
+.waitingIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.waitingText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.waitingTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brass);
+  animation: pulse 1.6s var(--ease-standard) infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse {
+    animation: none;
+  }
+}
+
+.waitingDetail {
+  font-size: 13px;
+  line-height: 19px;
+  color: rgb(var(--rgb-midnight) / 0.8);
+  font-variant-numeric: tabular-nums;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 20px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.splitFooter {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.textButton {
+  height: 44px;
+  padding: 0 var(--space-2);
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Bank linking ---------- */
+
+.progress {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-2);
+  list-style: none;
+}
+
+.progressItem {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.bar {
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-midnight) / 0.12);
+}
+
+.barDone {
+  background: var(--color-spruce);
+}
+
+.barCurrent {
+  background: var(--color-midnight);
+}
+
+.progressLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(var(--rgb-midnight) / 0.5);
+}
+
+.labelDone {
+  color: var(--color-spruce);
+}
+
+.labelCurrent {
+  color: var(--color-midnight);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.monogram {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.empty {
+  padding: var(--space-4);
+  border-radius: 14px;
+  background: var(--surface-quiet);
+  font-size: 14px;
+  line-height: 20px;
+  color: rgb(var(--rgb-midnight) / 0.8);
+}
+
+.accountGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.groupLabel {
+  margin-bottom: var(--space-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.accounts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-2);
+}
+
+.permissions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: 10px;
+}
+
+.can,
+.cannot {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 14px var(--space-4);
+  border-radius: 14px;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.can {
+  background: rgb(var(--rgb-spruce) / 0.06);
+}
+
+.cannot {
+  background: rgb(var(--rgb-garnet) / 0.05);
+}
+
+.canTitle {
+  font-weight: 600;
+  color: var(--color-spruce);
+}
+
+.cannotTitle {
+  font-weight: 600;
+  color: var(--color-garnet);
+}
+
+.consent {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.consentBox {
+  padding: 14px var(--space-4);
+  border: 1px solid rgb(var(--rgb-midnight) / 0.12);
+  border-radius: 14px;
+}
+
+.consentInvalid {
+  border: 1.5px solid var(--color-garnet);
+  background: rgb(var(--rgb-garnet) / 0.04);
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-garnet);
+}
+
+.handoff {
+  display: flex;
+  gap: 10px;
+  font-size: 13px;
+  line-height: 19px;
+  color: rgb(var(--rgb-midnight) / 0.8);
+}
+
+.linked {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.linkedBanner {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  background: rgb(var(--rgb-spruce) / 0.08);
+}
+
+.linkedIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  background: var(--color-spruce);
+  color: var(--color-porcelain);
+}
+
+.linkedTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.rowItem {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.rowLabel {
+  color: var(--text-secondary);
+}
+
+.rowValue {
+  font-weight: 600;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}

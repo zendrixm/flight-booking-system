@@ -1,0 +1,26 @@
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.nav {
+  flex: 1 1 220px;
+  max-width: 260px;
+  min-width: 0;
+}
+
+.content {
+  display: flex;
+  flex: 999 1 640px;
+  flex-direction: column;
+  gap: var(--gap);
+  min-width: 0;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    max-width: none;
+  }
+}

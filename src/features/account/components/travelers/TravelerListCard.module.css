@@ -1,0 +1,86 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 14px;
+  width: 100%;
+  padding: 18px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+  background: var(--color-porcelain);
+  text-align: left;
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.card:hover {
+  border-color: var(--border-strong);
+}
+
+.selected,
+.selected:hover {
+  border: 1.5px solid var(--color-brass);
+  box-shadow: 0 8px 24px rgb(var(--rgb-midnight) / 0.06);
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+}
+
+.avatar {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-midnight) / 0.06);
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.accountHolder {
+  background: var(--color-brass);
+  color: var(--color-midnight);
+}
+
+.draft {
+  border: 1.5px dashed rgb(var(--rgb-midnight) / 0.32);
+  background: transparent;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.text {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.kind {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

@@ -1,0 +1,21 @@
+.jumpLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.jumpLink {
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid rgb(var(--rgb-midnight) / 0.12);
+  border-radius: var(--radius-pill);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.jumpLink:hover {
+  background: rgb(var(--rgb-midnight) / 0.05);
+}

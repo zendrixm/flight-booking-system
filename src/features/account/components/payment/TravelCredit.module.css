@@ -1,0 +1,247 @@
+/* ---------- Card on the page ---------- */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--gap);
+  border-radius: var(--radius-panel);
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.balanceBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.balance {
+  font: 400 48px / 52px var(--font-serif);
+}
+
+.onDarkMuted {
+  font-size: 13px;
+  color: var(--text-on-dark-secondary);
+}
+
+.ledger {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.ledgerRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 10px 0;
+  border-top: 1px solid rgb(var(--rgb-porcelain) / 0.12);
+  font-size: 13px;
+}
+
+.ledgerText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ledgerLabel {
+  font-weight: 600;
+}
+
+.amountAdded,
+.amountUsed {
+  flex-shrink: 0;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.amountAdded {
+  color: var(--color-brass);
+}
+
+.amountUsed {
+  color: var(--text-on-dark-secondary);
+}
+
+.detailsButton {
+  align-self: flex-start;
+}
+
+/* ---------- Details dialog ---------- */
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 20px;
+  border-radius: 18px;
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+}
+
+.summaryBalance {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.summaryLabel {
+  font: var(--type-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgb(var(--rgb-porcelain) / 0.68);
+}
+
+.summaryAmount {
+  font: 400 44px / 48px var(--font-serif);
+}
+
+.dialogSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.lots {
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+}
+
+.lot {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 14px var(--space-4);
+}
+
+.lot + .lot {
+  border-top: 1px solid var(--divider);
+}
+
+.lotNext {
+  background: rgb(var(--rgb-brass) / 0.08);
+}
+
+.lotText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.lotLabel {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.lotDetail {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.lotAmount {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.amount {
+  font-size: 15px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.expiry,
+.expiryNext {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.expiryNext {
+  color: var(--text-primary);
+}
+
+.activity {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.activityRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 10px 0;
+  border-top: 1px solid var(--divider);
+}
+
+.activityAdded,
+.activityUsed {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.activityAdded {
+  color: var(--color-spruce);
+}
+
+.activityUsed {
+  color: var(--text-secondary);
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 14px var(--space-4) 14px 34px;
+  border-radius: 14px;
+  background: rgb(var(--rgb-brass) / 0.1);
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.rules li::marker {
+  color: var(--color-brass);
+}
+
+.dialogFooter {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.termsLink {
+  font-size: 14px;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.dialogButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

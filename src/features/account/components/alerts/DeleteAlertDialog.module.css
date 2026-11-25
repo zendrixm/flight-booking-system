@@ -1,0 +1,36 @@
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px var(--space-4);
+  border-radius: 14px;
+  background: var(--surface-quiet);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.route {
+  font-weight: 600;
+}
+
+.detail {
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.pauseHint {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+.textButton {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

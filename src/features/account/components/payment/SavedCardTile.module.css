@@ -1,0 +1,145 @@
+.tile {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.face {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 1.6;
+  min-height: 168px;
+  padding: 20px;
+  border-radius: var(--radius-panel);
+  background:
+    linear-gradient(rgb(var(--rgb-porcelain) / 0.08), rgb(var(--rgb-porcelain) / 0.08)), var(--color-midnight);
+  color: var(--text-on-dark);
+}
+
+.default {
+  background: var(--color-midnight);
+  box-shadow:
+    0 0 0 2px var(--color-porcelain),
+    0 0 0 3.5px var(--color-brass);
+}
+
+.expired {
+  opacity: 0.4;
+}
+
+.topRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 26px;
+  border-radius: 6px;
+  background: var(--color-brass);
+}
+
+.chipInner {
+  width: 20px;
+  height: 14px;
+  border: 1px solid rgb(var(--rgb-midnight) / 0.4);
+  border-radius: 3px;
+}
+
+.defaultBadge,
+.expiredBadge {
+  display: inline-flex;
+  align-items: center;
+  height: 24px;
+  padding: 0 10px;
+  border-radius: var(--radius-pill);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.defaultBadge {
+  background: var(--color-brass);
+  color: var(--color-midnight);
+}
+
+.expiredBadge {
+  background: var(--color-porcelain);
+  color: var(--color-garnet);
+}
+
+.kind {
+  font: var(--type-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(var(--rgb-porcelain) / 0.72);
+}
+
+.number {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+}
+
+.bottomRow {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 13px;
+}
+
+.detail,
+.detailEnd {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.detailEnd {
+  align-items: flex-end;
+}
+
+.detailLabel {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(var(--rgb-porcelain) / 0.6);
+}
+
+.holder {
+  overflow: hidden;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.expiry {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.usage {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-1);
+}

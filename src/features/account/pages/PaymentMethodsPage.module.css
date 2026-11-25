@@ -1,0 +1,78 @@
+.description {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sectionTight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.sectionTitle {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: var(--gap);
+}
+
+.addTile {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 64px;
+  padding: var(--space-3) 20px;
+  border: 1.5px dashed rgb(var(--rgb-midnight) / 0.24);
+  border-radius: var(--radius-card);
+  background: transparent;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.addTile:hover {
+  border-color: var(--border-strong);
+  background: var(--surface-quiet);
+}
+
+.addIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-midnight) / 0.06);
+}
+
+.brands {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.twoUp {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: var(--gap);
+}
+
+@media (max-width: 480px) {
+  .brands {
+    flex-basis: 100%;
+    text-align: center;
+  }
+}

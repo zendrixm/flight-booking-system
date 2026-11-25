@@ -1,0 +1,136 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: var(--gap);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.savedNote {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: 10px var(--space-3);
+  border-radius: var(--radius-md);
+  background: rgb(var(--rgb-spruce) / 0.08);
+  color: var(--color-spruce);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-style: normal;
+  line-height: 24px;
+}
+
+.addressName {
+  font-weight: 600;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.receipts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--divider);
+}
+
+.groupLabel {
+  font: var(--type-label);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.receiptEmail {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.link {
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.company {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 14px;
+  border-radius: 14px;
+  background: rgb(var(--rgb-midnight) / 0.03);
+}
+
+.companySaved {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-spruce);
+}
+
+.companyRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.companyText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.companyName {
+  font-weight: 600;
+}
+
+.companyAddress {
+  color: var(--text-secondary);
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.textButton {
+  flex-shrink: 0;
+  height: 32px;
+  padding: 0 4px;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

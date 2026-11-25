@@ -1,0 +1,68 @@
+.code {
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  font-variant-numeric: tabular-nums;
+}
+
+.note {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+.note a {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-underline-offset: 3px;
+}
+
+.trips {
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  list-style: none;
+}
+
+.trip {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+}
+
+.trip + .trip {
+  border-top: 1px solid var(--divider);
+}
+
+.tripText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.tripCity {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tripMeta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.splitFooter {
+  display: flex;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.footerButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}

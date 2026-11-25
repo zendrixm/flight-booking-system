@@ -1,0 +1,81 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--gap);
+  border: 1px solid rgb(var(--rgb-midnight) / 0.12);
+  border-radius: var(--radius-panel);
+  background: rgb(var(--rgb-midnight) / 0.02);
+}
+
+.formHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.formTitle {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.fullRow {
+  grid-column: 1 / -1;
+}
+
+.cardNumber {
+  letter-spacing: 0.06em;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.note {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+.formActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+/* Compact forms inside the billing card. */
+.inlineForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.inlineFormQuiet {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: 14px;
+  border-radius: 14px;
+  background: rgb(var(--rgb-midnight) / 0.03);
+}
+
+.twoColumns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+@media (max-width: 400px) {
+  .cardGrid,
+  .twoColumns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}

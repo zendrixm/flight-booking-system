@@ -1,0 +1,100 @@
+/* The nav switches to a horizontal strip whenever it is given at least 300px (i.e. full width). */
+.container {
+  container: account-nav / inline-size;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-3) var(--space-4);
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tier {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.itemWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.separator {
+  height: 1px;
+  margin: var(--space-2) var(--space-3);
+  background: var(--border-subtle);
+}
+
+/* Shared navigation recipe (same as the console sidebar): 12px radius, 72% text,
+   6% hover tint, 10% active tint with a Brass icon. */
+.link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  height: var(--touch-target);
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.link:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.link[aria-current='page'] {
+  background: var(--surface-selected);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.link[aria-current='page'] .icon {
+  color: var(--color-brass);
+}
+
+.link:focus-visible {
+  outline-offset: -2px;
+}
+
+.label {
+  flex: 1 1 auto;
+}
+
+@container account-nav (min-width: 300px) {
+  .nav {
+    flex-direction: row;
+    overflow-x: auto;
+  }
+
+  .profile,
+  .separator {
+    display: none;
+  }
+
+  .link {
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+}

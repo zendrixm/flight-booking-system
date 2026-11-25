@@ -1,0 +1,82 @@
+/* Shared by the bordered cards and rows on the account settings page. */
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--space-4);
+  padding: 18px 20px;
+}
+
+/* Rows are divided; content that continues the row above (a form, a warning) is `.attached`. */
+.card > * + *:not(.attached) {
+  border-top: 1px solid var(--divider);
+}
+
+.attached {
+  padding-top: 0;
+}
+
+.rowText {
+  display: flex;
+  flex: 1 1 200px;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.rowTitle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.rowDetail {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+.rowIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  background: rgb(var(--rgb-midnight) / 0.05);
+}
+
+.formPanel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: 20px;
+}
+
+.formActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--space-2);
+}
+
+.textButton {
+  height: 32px;
+  padding: 0 var(--space-2);
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
