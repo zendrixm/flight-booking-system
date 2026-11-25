@@ -1,0 +1,58 @@
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.columns > .card {
+  flex: 999 1 560px;
+  min-width: 0;
+}
+
+.audit {
+  flex: 1 1 320px;
+  max-width: 420px;
+}
+
+.card {
+  overflow: hidden;
+  border: 1px solid var(--divider);
+  border-radius: var(--space-4);
+  background: var(--color-porcelain);
+}
+
+.cardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 18px 20px;
+}
+
+.cardTitles {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.cardNote {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.unsaved {
+  margin: var(--space-4) 20px 20px;
+}
+
+@media (max-width: 760px) {
+  .audit {
+    max-width: none;
+  }
+}

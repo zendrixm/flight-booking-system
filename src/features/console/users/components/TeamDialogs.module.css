@@ -1,0 +1,76 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.difference {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.gains,
+.losses {
+  display: flex;
+  flex: 1 1 200px;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 14px var(--space-4);
+  border-radius: 14px;
+}
+
+.gains {
+  background: rgb(var(--rgb-spruce) / 0.06);
+  --dot: var(--color-spruce);
+}
+
+.losses {
+  background: rgb(var(--rgb-garnet) / 0.06);
+  --dot: var(--color-garnet);
+}
+
+.differenceTitle {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--dot);
+}
+
+.differenceList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.differenceList li {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.differenceList li::before {
+  content: '';
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 5px;
+  border-radius: var(--radius-pill);
+  background: var(--dot);
+}
+
+.points {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+  padding: 14px var(--space-4) 14px 34px;
+  border-radius: 14px;
+  background: var(--surface-quiet);
+  font-size: 13px;
+  line-height: 19px;
+}

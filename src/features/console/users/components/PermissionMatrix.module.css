@@ -1,0 +1,135 @@
+.table thead tr {
+  background: rgb(var(--rgb-midnight) / 0.03);
+}
+
+.table thead th:first-child,
+.table tbody th:first-child {
+  padding-left: 20px;
+}
+
+.table thead th:last-child,
+.table tbody td:last-child {
+  padding-right: 20px;
+}
+
+.roleHeading {
+  text-align: center;
+  white-space: nowrap;
+}
+
+.table .roleHeading {
+  text-align: center;
+}
+
+.roleName {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.lock {
+  color: var(--text-muted);
+}
+
+.table tbody .capability {
+  font-weight: 500;
+}
+
+.capabilityText {
+  display: flex;
+  flex-direction: column;
+}
+
+.capabilityDescription {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.table .cell {
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-2);
+  text-align: center;
+}
+
+.box {
+  position: relative;
+  display: inline-flex;
+}
+
+/* The native checkbox stays focusable and clickable; the mark draws it. */
+.input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.input:disabled {
+  cursor: not-allowed;
+}
+
+.mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border: 1.5px solid rgb(var(--rgb-midnight) / 0.32);
+  border-radius: 6px;
+  background: var(--color-porcelain);
+  color: transparent;
+  pointer-events: none;
+}
+
+.input:checked + .mark {
+  border-color: var(--color-midnight);
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.input:disabled + .mark {
+  opacity: 0.4;
+}
+
+.input:focus-visible + .mark {
+  outline: 2px solid var(--color-midnight);
+  outline-offset: 2px;
+}
+
+.legend {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.legendItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendAllowed,
+.legendNotAllowed,
+.legendFixed {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.legendAllowed {
+  background: var(--color-midnight);
+}
+
+.legendNotAllowed {
+  border: 1.5px solid rgb(var(--rgb-midnight) / 0.32);
+}
+
+.legendFixed {
+  background: var(--color-midnight);
+  opacity: 0.4;
+}
