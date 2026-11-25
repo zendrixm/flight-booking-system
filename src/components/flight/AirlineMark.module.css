@@ -1,0 +1,37 @@
+.mark {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: rgb(var(--rgb-midnight) / 0.06);
+  color: var(--color-midnight);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.small {
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  letter-spacing: 0;
+}
+
+.medium {
+  width: 36px;
+  height: 36px;
+}
+
+.large {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+}
+
+.dark {
+  background: var(--color-midnight);
+  color: var(--color-brass);
+}

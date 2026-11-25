@@ -1,0 +1,189 @@
+.pass {
+  /* The notches punch through to whatever surface the pass sits on. */
+  --pass-notch-color: var(--surface-page);
+  position: relative;
+  border-radius: 28px;
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+  box-shadow: 0 32px 64px rgb(var(--rgb-midnight) / 0.24);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding: 28px 28px var(--gap);
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.airline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.kind {
+  font: var(--type-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(var(--rgb-porcelain) / 0.7);
+}
+
+.route {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.endpoint,
+.endpointEnd {
+  display: flex;
+  flex-direction: column;
+}
+
+.endpointEnd {
+  align-items: flex-end;
+}
+
+.code {
+  font: 400 64px / 64px var(--font-serif);
+}
+
+.city {
+  font-size: 13px;
+  color: rgb(var(--rgb-porcelain) / 0.7);
+}
+
+.plane {
+  color: var(--color-brass);
+  transform: rotate(45deg);
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4) var(--space-3);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.wide {
+  grid-column: span 3;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgb(var(--rgb-porcelain) / 0.64);
+}
+
+.value,
+.largeValue {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.largeValue {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.tear {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 24px;
+}
+
+.notchStart,
+.notchEnd {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-pill);
+  background: var(--pass-notch-color);
+}
+
+.notchStart {
+  left: -12px;
+}
+
+.notchEnd {
+  right: -12px;
+}
+
+.tearLine {
+  flex: 1 1 auto;
+  margin: 0 20px;
+  border-top: 2px dashed rgb(var(--rgb-porcelain) / 0.2);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+  padding: var(--gap) 28px 28px;
+}
+
+.meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 13px;
+  line-height: 18px;
+  color: rgb(var(--rgb-porcelain) / 0.76);
+}
+
+.zone {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brass);
+  color: var(--color-midnight);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ---------- Compact (phone app) ---------- */
+.compact {
+  border-radius: var(--radius-dialog);
+}
+
+.compact .top {
+  gap: var(--space-4);
+  padding: var(--space-5) var(--space-5) var(--space-4);
+}
+
+.compact .code {
+  font: 400 44px / 44px var(--font-serif);
+}
+
+.compact .largeValue {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.compact .bottom {
+  gap: var(--space-4);
+  padding: var(--space-4) var(--space-5) var(--space-5);
+}
