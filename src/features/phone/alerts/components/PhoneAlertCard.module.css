@@ -1,0 +1,58 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--border-subtle);
+  border-radius: 18px;
+}
+
+.belowTarget {
+  border-color: rgb(var(--rgb-spruce) / 0.4);
+  background: var(--surface-success);
+}
+
+.paused {
+  opacity: 0.72;
+}
+
+.topRow,
+.bottomRow {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.topRow {
+  align-items: flex-start;
+}
+
+.bottomRow {
+  align-items: flex-end;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.route {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.meta {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text-secondary);
+}
+
+.fare {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 28px;
+  font-variant-numeric: tabular-nums;
+}

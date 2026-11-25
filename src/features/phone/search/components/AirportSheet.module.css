@@ -1,0 +1,77 @@
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.groupTitle {
+  padding: var(--space-1) var(--space-1) 6px;
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.airport {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 60px;
+  padding: var(--space-2) var(--space-1);
+  border: 0;
+  border-bottom: 1px solid var(--divider);
+  background: transparent;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.airport:hover {
+  background: var(--surface-quiet);
+}
+
+.planeTile {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgb(var(--rgb-midnight) / 0.06);
+}
+
+.planeTile svg {
+  transform: rotate(45deg);
+}
+
+.names {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.city {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.airportName {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-muted);
+}
+
+.code {
+  flex-shrink: 0;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--text-secondary);
+}
+
+.check {
+  flex-shrink: 0;
+  color: var(--color-brass);
+}

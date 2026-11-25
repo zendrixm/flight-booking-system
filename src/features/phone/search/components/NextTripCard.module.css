@@ -1,0 +1,48 @@
+.card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: var(--space-4);
+  border-radius: var(--radius-panel);
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+  text-decoration: none;
+}
+
+.card:hover .action {
+  background: rgb(var(--rgb-brass) / 0.88);
+}
+
+.text {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.city {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  line-height: 30px;
+}
+
+.details {
+  font-size: 13px;
+  line-height: 18px;
+  font-variant-numeric: tabular-nums;
+  color: rgb(var(--rgb-porcelain) / 0.72);
+}
+
+.action {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  height: 36px;
+  padding: 0 14px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brass);
+  color: var(--color-midnight);
+  font-size: 13px;
+  font-weight: 700;
+}

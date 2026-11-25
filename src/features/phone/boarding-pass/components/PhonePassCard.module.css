@@ -1,0 +1,164 @@
+.pass {
+  border-radius: var(--radius-dialog);
+  background: var(--color-porcelain);
+  color: var(--text-primary);
+}
+
+.top {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-6) var(--space-2);
+}
+
+.brandRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.airline {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.route {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.endpoint,
+.endpointEnd {
+  display: flex;
+  flex-direction: column;
+}
+
+.endpointEnd {
+  align-items: flex-end;
+}
+
+.code {
+  font-family: var(--font-serif);
+  font-size: 56px;
+  line-height: 56px;
+}
+
+.time {
+  font-size: 13px;
+  line-height: 18px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
+.plane {
+  justify-self: center;
+  color: var(--color-brass);
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fieldLabel {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.fieldValue {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  font-variant-numeric: tabular-nums;
+}
+
+.passenger {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.zone {
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.tear {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
+/* The notches punch through to the Midnight screen behind the pass. */
+.notchStart,
+.notchEnd {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-dark);
+}
+
+.notchStart {
+  left: -12px;
+}
+
+.notchEnd {
+  right: -12px;
+}
+
+.tearLine {
+  flex: 1 1 auto;
+  margin: 0 var(--space-6);
+  border-top: 2px dashed var(--border-control);
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-6) var(--space-6);
+}
+
+.barcodeButton {
+  display: inline-flex;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.meta {
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 360px) {
+  .code {
+    font-size: 44px;
+    line-height: 44px;
+  }
+
+  .fieldValue {
+    font-size: 17px;
+  }
+}

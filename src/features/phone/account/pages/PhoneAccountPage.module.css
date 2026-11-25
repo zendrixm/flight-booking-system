@@ -1,0 +1,32 @@
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--font-serif);
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+}
+
+.profileMeta {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.version {
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+}

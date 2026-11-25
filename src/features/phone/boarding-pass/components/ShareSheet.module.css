@@ -1,0 +1,54 @@
+.options {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  min-height: 64px;
+  padding: var(--space-2) 0;
+  border: 0;
+  border-bottom: 1px solid var(--divider);
+  background: transparent;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.option:hover .iconTile {
+  background: var(--surface-selected);
+}
+
+.iconTile {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgb(var(--rgb-midnight) / 0.06);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-secondary);
+}

@@ -1,0 +1,10 @@
+.link {
+  display: inline-flex;
+  align-self: flex-start;
+  align-items: center;
+  min-height: 44px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-underline-offset: 3px;
+}

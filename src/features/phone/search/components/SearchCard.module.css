@@ -1,0 +1,93 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-dialog);
+  background: var(--surface-page);
+  box-shadow: 0 12px 40px rgb(var(--rgb-midnight) / 0.1);
+}
+
+.route {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-card);
+  background: var(--surface-quiet);
+}
+
+/* Leaves room on the right for the swap button. */
+.place {
+  padding-right: 64px;
+}
+
+.routeDivider {
+  height: 1px;
+  margin: 0 var(--space-4);
+  background: var(--border-subtle);
+}
+
+.swap {
+  position: absolute;
+  top: 50%;
+  right: var(--space-3);
+  background: var(--surface-page);
+  transform: translateY(-50%);
+}
+
+.swap svg {
+  transform: rotate(90deg);
+}
+
+.code {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-radius: var(--radius-card);
+  background: var(--surface-quiet);
+}
+
+.travelers {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-right: var(--space-1);
+  border-radius: var(--radius-card);
+  background: var(--surface-quiet);
+}
+
+.travelersPicker {
+  flex: 1 1 auto;
+}
+
+.quickAdults {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.quickAdults button {
+  background: var(--surface-page);
+}
+
+.errors {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: 0 var(--space-1);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  color: var(--color-garnet);
+}
+
+.submit {
+  height: 56px;
+  border-radius: var(--radius-card);
+  font-size: 16px;
+}

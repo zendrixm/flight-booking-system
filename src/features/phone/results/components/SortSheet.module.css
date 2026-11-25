@@ -1,0 +1,46 @@
+.options {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  min-height: 60px;
+  padding: var(--space-2) var(--space-1);
+  border-bottom: 1px solid var(--divider);
+  cursor: pointer;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.label {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-secondary);
+}
+
+/* A larger native radio in Midnight, so it is easy to hit and keeps its focus ring. */
+.radio {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  margin: 0;
+  accent-color: var(--color-midnight);
+  cursor: pointer;
+}
