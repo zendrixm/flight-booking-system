@@ -1,0 +1,61 @@
+.alert {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: 12px 16px;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.icon {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/*
+ * The message always sits beside its icon. When the alert is too narrow for the message and the
+ * action side by side, the action wraps below.
+ */
+.body {
+  flex: 1 1 0;
+  min-width: min(240px, calc(100% - 16px - var(--space-3)));
+}
+
+/* Block layout so links and emphasis flow inside the message text. */
+.title {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: 600;
+}
+
+.action {
+  flex-shrink: 0;
+  align-self: center;
+  margin-left: auto;
+}
+
+.info {
+  background: var(--surface-quiet);
+  color: var(--text-primary);
+}
+
+.attention {
+  background: var(--surface-attention);
+  color: var(--text-primary);
+}
+
+.attention .icon {
+  color: var(--color-brass);
+}
+
+.success {
+  background: var(--surface-success);
+  color: var(--color-spruce);
+}
+
+.danger {
+  background: rgb(var(--rgb-garnet) / 0.06);
+  color: var(--color-garnet);
+}

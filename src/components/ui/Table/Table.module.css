@@ -1,0 +1,57 @@
+/* Positioned so visually hidden cell text (absolutely positioned) stays inside the scroll area. */
+.scroller {
+  position: relative;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  min-width: var(--table-min-width, 560px);
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.table th,
+.table td {
+  padding: var(--space-4);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.inset th:first-child,
+.inset td:first-child {
+  padding-left: var(--gap);
+}
+
+.inset th:last-child,
+.inset td:last-child {
+  padding-right: var(--gap);
+}
+
+.table thead th {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+  font: var(--type-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.table tbody tr {
+  border-top: 1px solid var(--divider);
+}
+
+.table tbody th {
+  font-weight: 600;
+}
+
+/* Numbers, codes and money line up in columns. */
+.table td {
+  font-variant-numeric: tabular-nums;
+}
+
+[data-density='compact'] .table th,
+[data-density='compact'] .table td {
+  padding-top: var(--space-3);
+  padding-bottom: var(--space-3);
+}

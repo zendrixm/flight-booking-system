@@ -1,0 +1,54 @@
+.tile {
+  position: relative;
+  display: flex;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.face {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 52px;
+  padding: 6px var(--space-2);
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.face:hover {
+  background: var(--surface-hover);
+}
+
+.input:checked + .face {
+  border-color: var(--color-brass);
+  box-shadow: inset 0 0 0 0.5px var(--color-brass);
+  background: rgb(var(--rgb-brass) / 0.1);
+}
+
+.input:focus-visible + .face {
+  outline: 2px solid var(--color-midnight);
+  outline-offset: 2px;
+}
+
+.input:disabled + .face {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.detail {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}

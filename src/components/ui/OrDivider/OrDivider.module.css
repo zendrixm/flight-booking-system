@@ -1,0 +1,13 @@
+.divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.line {
+  flex: 1 1 auto;
+  height: 1px;
+  background: var(--border-subtle);
+}

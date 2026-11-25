@@ -1,0 +1,171 @@
+.month {
+  display: flex;
+  flex: 1 1 280px;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.monthName {
+  font-family: var(--font-serif);
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.compact .monthName {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+  row-gap: 2px;
+}
+
+.weekday {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 28px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  height: 52px;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.compact .day {
+  height: 40px;
+  border-radius: 10px;
+}
+
+.day:not(:disabled):hover {
+  box-shadow: inset 0 0 0 1px var(--color-midnight);
+}
+
+.day:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.dayNumber {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 18px;
+}
+
+.day:disabled .dayNumber {
+  font-weight: 500;
+}
+
+.meta {
+  min-height: 14px;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 14px;
+  font-variant-numeric: tabular-nums;
+  color: rgb(var(--rgb-midnight) / 0.6);
+}
+
+.low .meta {
+  color: var(--color-spruce);
+}
+
+.inRange {
+  border-radius: 0;
+  background: var(--surface-hover);
+}
+
+.selected {
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.selected .meta {
+  color: rgb(var(--rgb-porcelain) / 0.8);
+}
+
+.today .dayNumber {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* ---------- Touch (phone app) ---------- */
+.touch {
+  flex-basis: auto;
+}
+
+.touch .monthName {
+  padding: var(--space-1);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.touch .grid {
+  row-gap: var(--space-1);
+}
+
+.touch .day {
+  height: 44px;
+  border-radius: 0;
+}
+
+.touch .day:not(:disabled):hover {
+  box-shadow: none;
+}
+
+.touch .dayNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  font-size: 15px;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.touch .day:not(:disabled):hover .dayNumber {
+  box-shadow: inset 0 0 0 1px var(--color-midnight);
+}
+
+.touch .selected {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.touch .selected .dayNumber {
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+  font-weight: 700;
+}
+
+.touch .inRange {
+  background: rgb(var(--rgb-brass) / 0.16);
+}
+
+.touch .rangeStart {
+  background: linear-gradient(90deg, transparent 50%, rgb(var(--rgb-brass) / 0.16) 50%);
+}
+
+.touch .rangeEnd {
+  background: linear-gradient(90deg, rgb(var(--rgb-brass) / 0.16) 50%, transparent 50%);
+}

@@ -1,0 +1,25 @@
+.avatar {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1;
+}
+
+.brass {
+  background: var(--color-brass);
+  color: var(--color-midnight);
+}
+
+.midnight {
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.neutral {
+  background: rgb(var(--rgb-midnight) / 0.08);
+  color: var(--color-midnight);
+}

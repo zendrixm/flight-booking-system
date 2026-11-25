@@ -1,0 +1,36 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-inside-card);
+  min-width: 0;
+  padding: var(--gap);
+  border-radius: var(--radius-panel);
+}
+
+.outline {
+  border: 1px solid var(--border-subtle);
+  background: var(--color-porcelain);
+}
+
+.quiet {
+  background: var(--surface-quiet);
+}
+
+.dark {
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.attention {
+  background: rgb(var(--rgb-brass) / 0.1);
+}
+
+.flush {
+  padding: 0;
+  gap: 0;
+  overflow: hidden;
+}
+
+.compactRadius {
+  border-radius: var(--radius-card);
+}

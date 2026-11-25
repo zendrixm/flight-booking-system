@@ -1,0 +1,58 @@
+.checkbox {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  min-height: 32px;
+  font-size: 14px;
+  line-height: 20px;
+  cursor: pointer;
+}
+
+.input {
+  flex-shrink: 0;
+  width: 18px;
+  height: 18px;
+  margin: 1px 0 0;
+  accent-color: var(--color-midnight);
+  cursor: pointer;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.description {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-muted);
+}
+
+.withMeta {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  font-size: 15px;
+}
+
+.withMeta .input {
+  margin-top: 0;
+}
+
+.withMeta .text {
+  flex: 1 1 auto;
+}
+
+.meta {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
