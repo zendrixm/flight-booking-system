@@ -1,0 +1,87 @@
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  gap: 14px;
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: rgb(var(--rgb-brass) / 0.14);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.itemTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.itemBody {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(var(--rgb-midnight) / 0.76);
+}
+
+.travelers {
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+}
+
+.travelersTitle {
+  padding: var(--space-3) var(--space-4);
+  background: var(--surface-quiet);
+  font: var(--type-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.traveler {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--divider);
+}
+
+.travelerText {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.travelerName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.passport {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}

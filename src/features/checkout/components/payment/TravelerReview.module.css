@@ -1,0 +1,31 @@
+.review {
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--gap);
+  border-bottom: 1px solid var(--divider);
+}
+
+.title {
+  font: var(--type-title-l);
+}
+
+.edit {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--touch-target);
+  font-size: 14px;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.muted {
+  color: var(--text-secondary);
+}

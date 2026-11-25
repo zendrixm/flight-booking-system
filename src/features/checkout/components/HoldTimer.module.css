@@ -1,0 +1,27 @@
+.timer,
+.expired {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: var(--radius-md);
+  background: var(--surface-attention);
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.expired {
+  align-items: flex-start;
+  background: var(--surface-danger);
+  color: var(--color-garnet);
+}
+
+.clock {
+  font-variant-numeric: tabular-nums;
+}
+
+.link {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-underline-offset: 3px;
+}

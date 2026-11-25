@@ -1,0 +1,118 @@
+.hero {
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+.message {
+  display: flex;
+  flex: 1 1 520px;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+}
+
+.title {
+  font: 400 72px / 76px var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+.accent {
+  color: var(--color-brass);
+}
+
+.lede {
+  max-width: 560px;
+  font-size: 17px;
+  line-height: 26px;
+  color: rgb(var(--rgb-porcelain) / 0.76);
+}
+
+.referenceCard {
+  display: flex;
+  flex: 0 1 380px;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--gap);
+  border: 1px solid rgb(var(--rgb-porcelain) / 0.12);
+  border-radius: var(--radius-panel);
+  background: rgb(var(--rgb-porcelain) / 0.06);
+}
+
+.referenceHeader,
+.referenceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.referenceLabel {
+  font: var(--type-label);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-on-dark-secondary);
+}
+
+.ticketed {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 26px;
+  padding: 0 10px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-porcelain) / 0.1);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.ticketedDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brass);
+}
+
+.reference {
+  font-size: 48px;
+  line-height: 56px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+}
+
+.bookedAt {
+  font-size: 13px;
+  color: rgb(var(--rgb-porcelain) / 0.7);
+}
+
+@media (max-width: 760px) {
+  .title {
+    font: var(--type-page-title);
+  }
+
+  .reference {
+    font-size: 36px;
+    line-height: 44px;
+  }
+}

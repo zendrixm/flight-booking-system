@@ -1,0 +1,117 @@
+.actionsBar {
+  border-bottom: 1px solid var(--divider);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--space-4) var(--gap);
+}
+
+.added {
+  border-color: rgb(var(--rgb-spruce) / 0.4);
+  color: var(--color-spruce);
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.content {
+  display: flex;
+  flex: 999 1 600px;
+  flex-direction: column;
+  gap: var(--gap);
+  min-width: 0;
+}
+
+.aside {
+  display: flex;
+  flex: 1 1 340px;
+  flex-direction: column;
+  gap: var(--gap);
+  max-width: 400px;
+  min-width: 0;
+}
+
+.entryCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: var(--gap);
+  border-radius: var(--radius-panel);
+  background: rgb(var(--rgb-brass) / 0.12);
+}
+
+.entryTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.entryText {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.entryLink {
+  align-self: flex-start;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.entryLink:not(:disabled):hover {
+  background: transparent;
+}
+
+.helpCard {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+}
+
+.helpIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background: var(--surface-quiet);
+}
+
+.helpText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.helpTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.helpMeta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1000px) {
+  .aside {
+    max-width: none;
+  }
+}

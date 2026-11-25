@@ -1,0 +1,145 @@
+.bagGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-5) 0 0;
+  border: 0;
+  border-top: 1px solid var(--divider);
+}
+
+.bagLegend {
+  float: left;
+  width: 100%;
+  margin-bottom: var(--space-3);
+  padding: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.bagOptions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
+  gap: var(--space-3);
+}
+
+.protection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  align-items: start;
+  gap: var(--space-3);
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius-card);
+}
+
+.protection:focus {
+  outline: none;
+}
+
+.protection[aria-invalid='true'] {
+  padding: var(--space-2);
+  box-shadow: inset 0 0 0 1.5px var(--color-garnet);
+  background: rgb(var(--rgb-garnet) / 0.04);
+}
+
+.coverage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: var(--space-3);
+  list-style: none;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.coverageItem {
+  display: flex;
+  gap: 10px;
+}
+
+.coverageIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+  color: var(--color-spruce);
+}
+
+.error {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  color: var(--color-garnet);
+}
+
+.policyLink {
+  align-self: flex-start;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.policyLink:not(:disabled):hover {
+  background: transparent;
+}
+
+.addOns {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.addOn {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-top: 1px solid var(--divider);
+}
+
+.addOn:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.addOn[aria-disabled='true'] {
+  opacity: 0.4;
+}
+
+.addOnIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--surface-quiet);
+}
+
+.addOnText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.addOnLabel {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.addOnDescription {
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--text-secondary);
+}
+
+.addOnPrice {
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}

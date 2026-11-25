@@ -1,0 +1,33 @@
+.shell {
+  min-height: 100vh;
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.content {
+  display: flex;
+  flex: 999 1 600px;
+  flex-direction: column;
+  gap: var(--gap);
+  min-width: 0;
+}
+
+.aside {
+  position: sticky;
+  top: var(--gap);
+  flex: 1 1 340px;
+  max-width: 400px;
+  min-width: 0;
+}
+
+@media (max-width: 1000px) {
+  .aside {
+    position: static;
+    max-width: none;
+  }
+}

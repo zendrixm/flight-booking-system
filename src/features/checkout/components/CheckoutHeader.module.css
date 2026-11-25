@@ -1,0 +1,140 @@
+.header {
+  position: relative;
+  z-index: var(--z-app-bar);
+  border-bottom: 1px solid rgb(var(--rgb-porcelain) / 0.08);
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--gap);
+  max-width: var(--content-max-width);
+  height: var(--site-bar-height);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+.logo {
+  color: var(--text-on-dark);
+}
+
+.logo:focus-visible,
+.link:focus-visible {
+  outline-color: var(--color-porcelain);
+}
+
+.steps {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  list-style: none;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.line {
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: rgb(var(--rgb-porcelain) / 0.2);
+}
+
+.lineDone {
+  background: rgb(var(--rgb-porcelain) / 0.72);
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  min-height: var(--touch-target);
+  padding: 0 var(--space-1);
+  border-radius: var(--radius-md);
+  color: var(--text-on-dark);
+  text-decoration: none;
+}
+
+.locked {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.dot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-pill);
+  box-shadow: inset 0 0 0 1px rgb(var(--rgb-porcelain) / 0.6);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.done .dot {
+  background: var(--color-porcelain);
+  color: var(--color-midnight);
+  box-shadow: none;
+}
+
+.current .dot {
+  background: var(--color-brass);
+  color: var(--color-midnight);
+  box-shadow: 0 0 0 3px rgb(var(--rgb-brass) / 0.28);
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.secure {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-on-dark-secondary);
+}
+
+@media (max-width: 860px) {
+  /* Step names stay available to screen readers when only the numbers fit. */
+  .label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .secure {
+    display: none;
+  }
+
+  .line {
+    width: 16px;
+  }
+}
+
+@media (max-width: 520px) {
+  .word {
+    display: none;
+  }
+
+  .steps,
+  .step {
+    gap: 6px;
+  }
+
+  .line {
+    width: 8px;
+  }
+}

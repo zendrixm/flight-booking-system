@@ -1,0 +1,11 @@
+.card {
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+}
+
+.title {
+  padding: var(--space-5) var(--gap);
+  border-bottom: 1px solid var(--divider);
+  font: var(--type-title-l);
+}

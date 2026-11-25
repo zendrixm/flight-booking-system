@@ -1,0 +1,28 @@
+.bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-4) var(--space-5);
+  border-radius: var(--radius-card);
+  background: var(--surface-quiet);
+}
+
+.text {
+  flex: 1 1 240px;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.filled,
+.filled:not(:disabled):hover {
+  border: 1.5px solid var(--color-brass);
+  background: rgb(var(--rgb-brass) / 0.1);
+  cursor: default;
+}
