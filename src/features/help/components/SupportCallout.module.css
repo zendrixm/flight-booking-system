@@ -1,0 +1,67 @@
+.card,
+.wide {
+  display: flex;
+  gap: 14px;
+  padding: var(--gap);
+  border-radius: var(--radius-panel);
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+}
+
+.card {
+  flex-direction: column;
+}
+
+.wide {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4) var(--gap);
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.wide .text {
+  flex: 1 1 320px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.detail {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-on-dark-secondary);
+}
+
+.online {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(var(--rgb-porcelain) / 0.8);
+}
+
+.onlineDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brass);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card .actions {
+  flex-direction: column;
+}
