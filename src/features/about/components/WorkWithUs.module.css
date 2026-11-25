@@ -1,0 +1,29 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+  gap: var(--gap);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--gap);
+  border-radius: 24px;
+  background: rgb(var(--rgb-midnight) / 0.03);
+}
+
+.title {
+  font: var(--type-title-l);
+}
+
+.body {
+  font-size: 15px;
+  line-height: 23px;
+  color: var(--text-secondary);
+}
+
+.action {
+  align-self: flex-start;
+  margin-top: auto;
+}

@@ -1,0 +1,17 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-inside-card);
+  scroll-margin-top: var(--gap);
+}
+
+.title {
+  font: 400 44px / 48px var(--font-serif);
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}

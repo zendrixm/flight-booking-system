@@ -1,0 +1,86 @@
+.band {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+  padding: var(--gap);
+  border-radius: 32px;
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.intro {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.eyebrow {
+  font: var(--type-label);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+}
+
+.title {
+  font: 400 44px / 48px var(--font-serif);
+}
+
+.title em {
+  color: var(--color-brass);
+}
+
+.lead {
+  font-size: 15px;
+  line-height: 24px;
+  color: rgb(var(--rgb-porcelain) / 0.72);
+}
+
+.timeline {
+  flex: 2 1 480px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) 20px;
+  padding: 18px 0;
+}
+
+.milestone + .milestone {
+  border-top: 1px solid rgb(var(--rgb-porcelain) / 0.12);
+}
+
+.year {
+  flex: 0 0 72px;
+  font: 400 28px / 32px var(--font-serif);
+  color: var(--color-brass);
+  font-variant-numeric: tabular-nums;
+}
+
+.text {
+  flex: 1 1 240px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.milestoneTitle {
+  font: var(--type-title-m);
+}
+
+.milestoneBody {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(var(--rgb-porcelain) / 0.72);
+}
+
+@media (max-width: 760px) {
+  .title {
+    font-size: 36px;
+    line-height: 40px;
+  }
+}

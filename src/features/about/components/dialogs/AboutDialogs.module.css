@@ -1,0 +1,130 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-inside-card);
+}
+
+.fieldRow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--gap-inside-card);
+}
+
+.back {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 32px;
+  margin-top: calc(-1 * var(--space-2));
+  padding: 0 var(--space-2) 0 2px;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.back:hover {
+  color: var(--text-primary);
+}
+
+/* ---------- Lists: roles and press assets ---------- */
+.list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--space-4);
+}
+
+.list > li + li {
+  border-top: 1px solid var(--divider);
+}
+
+.roleButton {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  padding: var(--space-4);
+  border: 0;
+  background: transparent;
+  text-align: left;
+}
+
+.roleButton:hover {
+  background: rgb(var(--rgb-midnight) / 0.03);
+}
+
+.roleButton:focus-visible {
+  outline-offset: -2px;
+}
+
+.rowText {
+  flex: 1 1 160px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rowTitle {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.rowMeta {
+  font: var(--type-caption);
+  color: var(--text-secondary);
+}
+
+.assetRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 14px var(--space-4);
+}
+
+.assetIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgb(var(--rgb-midnight) / 0.05);
+}
+
+.note {
+  font: var(--type-caption);
+  color: var(--text-secondary);
+}
+
+/* ---------- Thank you ---------- */
+.sent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.sentIcon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-spruce) / 0.1);
+  color: var(--color-spruce);
+}
+
+.sentText {
+  font-size: 15px;
+  line-height: 23px;
+  color: rgb(var(--rgb-midnight) / 0.8);
+}

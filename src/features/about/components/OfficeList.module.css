@@ -1,0 +1,38 @@
+.grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+  gap: var(--gap);
+}
+
+.office {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: var(--gap);
+  border: 1px solid var(--border-subtle);
+  border-radius: 20px;
+}
+
+.kind {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.city {
+  font: 400 32px / 36px var(--font-serif);
+}
+
+.address {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
+
+.team {
+  font: var(--type-caption);
+  color: var(--text-muted);
+}
