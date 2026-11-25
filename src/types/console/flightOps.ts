@@ -42,11 +42,7 @@ export const FLIGHT_STATUS_CHOICES: ReadonlyArray<{ id: FlightStatusChoice; labe
 
 /** Reasons travelers see in the disruption message. */
 export type DisruptionReason =
-  | 'lateInboundAircraft'
-  | 'weather'
-  | 'airTrafficControl'
-  | 'technicalInspection'
-  | 'crewScheduling';
+  'lateInboundAircraft' | 'weather' | 'airTrafficControl' | 'technicalInspection' | 'crewScheduling';
 
 export const DISRUPTION_REASONS: ReadonlyArray<{ id: DisruptionReason; label: string }> = [
   { id: 'lateInboundAircraft', label: 'Late arrival of inbound aircraft' },

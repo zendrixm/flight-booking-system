@@ -29,9 +29,7 @@ export function getTrip(reference: string): Promise<Trip> {
 }
 
 export type TripLookupResult =
-  | { kind: 'found'; trip: Trip }
-  | { kind: 'alreadyInAccount'; trip: Trip }
-  | { kind: 'notFound' };
+  { kind: 'found'; trip: Trip } | { kind: 'alreadyInAccount'; trip: Trip } | { kind: 'notFound' };
 
 /**
  * Looks a booking up by reference and a traveler's last name, the way guests and the

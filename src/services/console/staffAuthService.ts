@@ -19,14 +19,10 @@ export function isStaffEmail(email: string): boolean {
 }
 
 export type StaffPasswordResult =
-  | { status: 'needsCode' }
-  | { status: 'wrongPassword'; attemptsLeft: number }
-  | { status: 'locked' };
+  { status: 'needsCode' } | { status: 'wrongPassword'; attemptsLeft: number } | { status: 'locked' };
 
 export type StaffCodeResult =
-  | { status: 'signedIn' }
-  | { status: 'wrongCode'; attemptsLeft: number }
-  | { status: 'locked' };
+  { status: 'signedIn' } | { status: 'wrongCode'; attemptsLeft: number } | { status: 'locked' };
 
 export type RecoveryKeyResult = { status: 'signedIn'; unusedKeysLeft: number } | { status: 'unknownKey' };
 

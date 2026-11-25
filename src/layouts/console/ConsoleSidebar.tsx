@@ -170,15 +170,13 @@ interface WorkspaceMenuProps {
 function WorkspaceMenu({ workspace, isRail, open, onOpenChange }: WorkspaceMenuProps) {
   const { switchWorkspace } = useStaffSession();
   const items: MenuEntry[] = [
-    ...WORKSPACES.map(
-      (option): MenuEntry => ({
-        id: option.code,
-        label: option.name,
-        description: option.description,
-        checked: option.code === workspace.code,
-        onSelect: () => switchWorkspace(option.code),
-      }),
-    ),
+    ...WORKSPACES.map((option): MenuEntry => ({
+      id: option.code,
+      label: option.name,
+      description: option.description,
+      checked: option.code === workspace.code,
+      onSelect: () => switchWorkspace(option.code),
+    })),
     { kind: 'separator', id: 'separator' },
     {
       id: 'settings',

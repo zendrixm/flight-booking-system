@@ -61,13 +61,7 @@ export const PALETTE: readonly PaletteColor[] = [
 export const OPACITY_LADDER = [100, 72, 40, 12, 6, 4] as const;
 
 export type OpacityExample =
-  | 'primary'
-  | 'secondary'
-  | 'caption'
-  | 'disabled'
-  | 'outlined'
-  | 'chip'
-  | 'readOnly';
+  'primary' | 'secondary' | 'caption' | 'disabled' | 'outlined' | 'chip' | 'readOnly';
 
 export const OPACITY_STEPS: ReadonlyArray<{
   step: string;

@@ -30,14 +30,7 @@ import {
 import styles from './ConsoleLoginPage.module.css';
 
 type LoginStep =
-  | 'credentials'
-  | 'sso'
-  | 'locked'
-  | 'forgot'
-  | 'resetSent'
-  | 'code'
-  | 'recovery'
-  | 'recovered';
+  'credentials' | 'sso' | 'locked' | 'forgot' | 'resetSent' | 'code' | 'recovery' | 'recovered';
 
 /** Vela Console sign-in: company SSO, or work email + password + authenticator code. */
 export function ConsoleLoginPage() {

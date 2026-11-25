@@ -80,8 +80,7 @@ export interface RefundQueue {
 }
 
 export type RefundDecisionRequest =
-  | { decision: 'approve'; amount: number; note: string }
-  | { decision: 'reject'; note: string };
+  { decision: 'approve'; amount: number; note: string } | { decision: 'reject'; note: string };
 
 export interface RefundQueueResult {
   queue: RefundQueue;

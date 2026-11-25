@@ -14,9 +14,7 @@ import { ContactFields } from './ContactFields';
 import { SentDialog } from './SentDialog';
 
 type CareersStep =
-  | { kind: 'roles' }
-  | { kind: 'apply'; role: OpenRole }
-  | { kind: 'sent'; role: OpenRole; email: string };
+  { kind: 'roles' } | { kind: 'apply'; role: OpenRole } | { kind: 'sent'; role: OpenRole; email: string };
 
 interface CareersDialogProps {
   /** Undefined while the roles are loading. */

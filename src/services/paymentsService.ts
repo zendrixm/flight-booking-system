@@ -5,9 +5,7 @@ import { ApiError, mockRequest } from './mockApi';
 
 /** Card payments go through the issuer's 3-D Secure check; wallets and banks hand off to the provider. */
 export type AuthorizationResult =
-  | { status: 'challenge'; maskedPhone: string }
-  | { status: 'redirect' }
-  | { status: 'declined' };
+  { status: 'challenge'; maskedPhone: string } | { status: 'redirect' } | { status: 'declined' };
 
 export interface PaymentRequest {
   method: PaymentMethodKind;

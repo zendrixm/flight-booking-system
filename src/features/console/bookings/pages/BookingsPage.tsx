@@ -29,10 +29,7 @@ import {
 import styles from './BookingsPage.module.css';
 
 type OpenPanel =
-  | { name: 'export'; scope: 'view' | 'selected' }
-  | { name: 'resend' }
-  | { name: 'manual' }
-  | null;
+  { name: 'export'; scope: 'view' | 'selected' } | { name: 'resend' } | { name: 'manual' } | null;
 
 function workspaceFilters(workspace: WorkspaceCode): BookingFilters {
   return workspace === 'ALL' ? {} : { market: workspace };

@@ -3,14 +3,7 @@ import type { IconName } from '@/components/icons';
 import type { ConsoleNavCounts } from '@/types/console/staff';
 
 export type ConsoleSection =
-  | 'dashboard'
-  | 'bookings'
-  | 'flights'
-  | 'refunds'
-  | 'pricing'
-  | 'customers'
-  | 'users'
-  | 'settings';
+  'dashboard' | 'bookings' | 'flights' | 'refunds' | 'pricing' | 'customers' | 'users' | 'settings';
 
 export interface ConsoleNavItem {
   id: ConsoleSection;
