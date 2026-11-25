@@ -45,8 +45,8 @@ let settings: WorkspaceSettings = structuredClone(SAVED_SETTINGS);
 let lastSaved = 'Last saved by Ian Cruz · Tue 6 Oct, 11:05';
 let logoUpdated = 'Updated 3 Mar 2026 by Ian Cruz';
 let isSettlementChangeRequested = false;
-let airlines: AirlineConnection[] = structuredClone([...AIRLINE_CONNECTIONS]);
-let apiKeys: Array<ApiKeySeed & { isRevoked: boolean }> = API_KEYS.map((key) => ({
+const airlines: AirlineConnection[] = structuredClone([...AIRLINE_CONNECTIONS]);
+const apiKeys: Array<ApiKeySeed & { isRevoked: boolean }> = API_KEYS.map((key) => ({
   ...key,
   isRevoked: false,
 }));

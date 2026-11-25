@@ -42,7 +42,6 @@ export function CustomersTable({ customers, openCustomerId, onOpen }: CustomersT
           const chip = customerStatusChip(customer.status);
           return (
             // Row clicks are a mouse shortcut; the reference link or button in the row is the keyboard path.
-            // eslint-disable-next-line jsx-a11y/click-events-have-key-events, jsx-a11y/no-noninteractive-element-interactions
             <tr
               key={customer.id}
               className={clsx(
