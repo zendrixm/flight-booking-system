@@ -1,0 +1,156 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.codeInput {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.lockIcon {
+  color: var(--text-muted);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.groupLabel,
+.routesLabel {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.routesLabel {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.routeCount {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-3);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  height: 32px;
+  padding: 0 var(--space-1) 0 var(--space-3);
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-midnight) / 0.06);
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.chip button {
+  width: 26px;
+  height: 26px;
+}
+
+.addRoute {
+  align-self: flex-start;
+}
+
+.picker {
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 14px;
+}
+
+.pickerTitle {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.option {
+  height: 36px;
+  padding: 0 var(--space-3);
+  border: 1px solid rgb(var(--rgb-midnight) / 0.14);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.option:hover {
+  border-color: var(--border-strong);
+}
+
+.option[aria-pressed='true'] {
+  border-color: var(--color-midnight);
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.done {
+  align-self: flex-end;
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 16px;
+  color: var(--color-garnet);
+}
+
+.preview {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--space-4);
+  border: 1px dashed rgb(var(--rgb-brass) / 0.8);
+  border-radius: var(--space-3);
+  background: rgb(var(--rgb-brass) / 0.08);
+}
+
+.previewLabel {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.previewHeadline {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.previewDetail {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
