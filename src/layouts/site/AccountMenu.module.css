@@ -1,0 +1,49 @@
+.profile {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 8px 12px 12px;
+}
+
+.profileText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.email {
+  overflow: hidden;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.membership {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin: 0 4px 8px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background: rgb(var(--rgb-brass) / 0.1);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.tier {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.credit {
+  font-variant-numeric: tabular-nums;
+}

@@ -1,0 +1,118 @@
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-app-bar);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  height: var(--console-bar-height);
+  padding: 0 var(--gap) 0 0;
+  border-bottom: 1px solid rgb(var(--rgb-porcelain) / 0.08);
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.brand {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: var(--console-sidebar-width);
+  padding-left: var(--space-4);
+  transition: width 0.2s ease;
+}
+
+.brandRail {
+  width: var(--console-rail-width);
+}
+
+.menuButton {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(var(--rgb-porcelain) / 0.16);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--color-porcelain);
+}
+
+.menuButton:hover {
+  border-color: rgb(var(--rgb-porcelain) / 0.32);
+  background: rgb(var(--rgb-porcelain) / 0.06);
+}
+
+.menuButton:focus-visible,
+.brand a:focus-visible {
+  outline-color: var(--color-porcelain);
+}
+
+.search {
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 560px;
+  margin-left: var(--space-3);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.environment {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 var(--space-3);
+  border-radius: var(--radius-pill);
+  background: var(--color-porcelain);
+  color: var(--color-spruce);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.environmentDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-spruce);
+}
+
+.clock {
+  flex-shrink: 0;
+  font-size: 13px;
+  color: rgb(var(--rgb-porcelain) / 0.72);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 860px) {
+  .topbar {
+    gap: var(--space-2);
+    padding: 0 var(--gap);
+  }
+
+  .brand {
+    width: auto;
+    padding-left: 0;
+    gap: var(--space-2);
+  }
+
+  .search {
+    margin-left: 0;
+  }
+
+  .product,
+  .environment,
+  .clock {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand {
+    transition: none;
+  }
+}

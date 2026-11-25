@@ -1,0 +1,135 @@
+.header {
+  position: relative;
+  z-index: var(--z-app-bar);
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+  border-bottom: 1px solid rgb(var(--rgb-porcelain) / 0.08);
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: var(--content-max-width);
+  height: var(--site-bar-height);
+  margin: 0 auto;
+  padding: 0 var(--gap);
+}
+
+.bar :focus-visible {
+  outline-color: var(--color-porcelain);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-left: var(--space-4);
+}
+
+.navLink {
+  display: inline-flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 12px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-on-dark-secondary);
+  text-decoration: none;
+}
+
+.navLink:hover {
+  background: rgb(var(--rgb-porcelain) / 0.06);
+  color: var(--color-porcelain);
+}
+
+.navLink[aria-current='page'] {
+  font-weight: 600;
+  color: var(--color-porcelain);
+  background: rgb(var(--rgb-porcelain) / 0.1);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-left: auto;
+}
+
+.localeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  height: 44px;
+  padding: 0 12px;
+  border: 0;
+  border-radius: var(--radius-md);
+  background: transparent;
+  color: var(--text-on-dark-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.localeButton:hover {
+  background: rgb(var(--rgb-porcelain) / 0.06);
+  color: var(--color-porcelain);
+}
+
+.accountButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 12px 0 6px;
+  border: 1px solid rgb(var(--rgb-porcelain) / 0.16);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  color: var(--color-porcelain);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.accountButton:hover {
+  border-color: rgb(var(--rgb-porcelain) / 0.32);
+}
+
+.accountButton[aria-expanded='true'] {
+  border-color: rgb(var(--rgb-porcelain) / 0.4);
+  background: rgb(var(--rgb-porcelain) / 0.1);
+}
+
+.chevron {
+  opacity: 0.68;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.accountButton[aria-expanded='true'] .chevron {
+  transform: rotate(180deg);
+}
+
+.signIn {
+  height: 44px;
+}
+
+.menuButton {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .nav,
+  .localeButton,
+  .accountName,
+  .chevron,
+  .signIn {
+    display: none;
+  }
+
+  .accountButton {
+    padding: 0 5px;
+  }
+
+  .menuButton {
+    display: inline-flex;
+  }
+}

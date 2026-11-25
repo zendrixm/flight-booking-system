@@ -1,0 +1,70 @@
+.shell {
+  min-height: 100vh;
+  background: var(--color-porcelain);
+  color: var(--color-midnight);
+}
+
+.body {
+  display: flex;
+  align-items: stretch;
+  min-height: calc(100vh - var(--console-bar-height));
+}
+
+.sidebarSlot {
+  position: sticky;
+  top: var(--console-bar-height);
+  flex-shrink: 0;
+  width: var(--console-sidebar-width);
+  height: calc(100vh - var(--console-bar-height));
+  overflow-y: auto;
+  background: var(--color-midnight);
+  scrollbar-width: thin;
+  transition: width 0.2s ease;
+}
+
+.rail {
+  width: var(--console-rail-width);
+  overflow: visible;
+}
+
+.content {
+  flex: 1 1 320px;
+  min-width: 0;
+  background: var(--surface-console);
+}
+
+.scrim {
+  position: fixed;
+  inset: var(--console-bar-height) 0 0 0;
+  z-index: calc(var(--z-drawer) - 1);
+  background: var(--overlay-scrim);
+}
+
+@media (max-width: 860px) {
+  .sidebarSlot {
+    position: fixed;
+    top: var(--console-bar-height);
+    bottom: 0;
+    left: 0;
+    z-index: var(--z-drawer);
+    width: var(--console-drawer-width);
+    height: auto;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition:
+      transform 0.2s ease,
+      visibility 0.2s;
+  }
+
+  .drawerOpen {
+    visibility: visible;
+    transform: none;
+    box-shadow: 24px 0 64px rgb(var(--rgb-midnight) / 0.24);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebarSlot {
+    transition: none;
+  }
+}

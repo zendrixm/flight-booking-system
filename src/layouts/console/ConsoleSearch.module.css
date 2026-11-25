@@ -1,0 +1,289 @@
+/* Sits on the Midnight app bar; turns light while results are open. */
+.search {
+  position: relative;
+  display: flex;
+  width: 100%;
+}
+
+.searchIcon {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  color: rgb(var(--rgb-porcelain) / 0.6);
+  pointer-events: none;
+}
+
+.input {
+  width: 100%;
+  height: 40px;
+  padding: 0 56px 0 40px;
+  border: 1px solid rgb(var(--rgb-porcelain) / 0.16);
+  border-radius: 10px;
+  background: rgb(var(--rgb-porcelain) / 0.08);
+  color: var(--color-porcelain);
+  font-size: 14px;
+  appearance: none;
+}
+
+.input.hasQuery {
+  padding-right: 42px;
+}
+
+.input::placeholder {
+  color: rgb(var(--rgb-porcelain) / 0.6);
+}
+
+.input:hover {
+  border-color: rgb(var(--rgb-porcelain) / 0.28);
+}
+
+.input:focus,
+.open .input {
+  border-color: var(--color-porcelain);
+  outline: none;
+  background: var(--color-porcelain);
+  color: var(--color-midnight);
+  box-shadow: 0 0 0 3px rgb(var(--rgb-porcelain) / 0.2);
+}
+
+.input:focus::placeholder {
+  color: rgb(var(--rgb-midnight) / 0.6);
+}
+
+.search:focus-within .searchIcon,
+.open .searchIcon {
+  color: rgb(var(--rgb-midnight) / 0.6);
+}
+
+.shortcut {
+  position: absolute;
+  top: 9px;
+  right: 10px;
+  height: 22px;
+  padding: 0 6px;
+  border: 1px solid rgb(var(--rgb-porcelain) / 0.2);
+  border-radius: 6px;
+  color: rgb(var(--rgb-porcelain) / 0.68);
+  font: inherit;
+  font-size: 12px;
+  line-height: 20px;
+  pointer-events: none;
+}
+
+.search:focus-within .shortcut {
+  display: none;
+}
+
+.clear {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 0;
+  border-radius: 8px;
+  background: rgb(var(--rgb-midnight) / 0.06);
+  color: var(--color-midnight);
+}
+
+/* ---------- Results ---------- */
+.panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 0;
+  z-index: var(--z-popover);
+  width: max(100%, min(520px, calc(100vw - 48px)));
+  max-height: min(560px, calc(100vh - 96px));
+  overflow-y: auto;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--space-4);
+  background: var(--color-porcelain);
+  color: var(--color-midnight);
+  box-shadow: 0 24px 64px rgb(var(--rgb-midnight) / 0.18);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  padding: 4px 0 6px;
+}
+
+.group:first-child {
+  padding-top: 10px;
+}
+
+.group + .group {
+  border-top: 1px solid rgb(var(--rgb-midnight) / 0.06);
+}
+
+.groupLabel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-4) 6px;
+  font: var(--type-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.groupCount {
+  font-weight: 500;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  min-height: 56px;
+  padding: var(--space-2) var(--space-4);
+  color: var(--color-midnight);
+  text-decoration: none;
+}
+
+.optionActive {
+  background: rgb(var(--rgb-midnight) / 0.05);
+}
+
+.tile {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+}
+
+.booking {
+  background: rgb(var(--rgb-midnight) / 0.06);
+}
+
+.customer {
+  background: rgb(var(--rgb-brass) / 0.14);
+}
+
+.flight {
+  background: var(--color-midnight);
+  color: var(--color-brass);
+}
+
+.optionText {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.optionTitle,
+.optionMeta {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.optionTitle {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 600;
+}
+
+.optionMeta {
+  font-size: 12px;
+  line-height: 17px;
+  color: var(--text-secondary);
+}
+
+.match {
+  padding: 0 1px;
+  border-radius: 3px;
+  background: rgb(var(--rgb-brass) / 0.24);
+  color: inherit;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 10px var(--space-4);
+  border-top: 1px solid var(--divider);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.keys {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.keys kbd {
+  font: inherit;
+  font-weight: 600;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 28px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 28px var(--gap);
+  text-align: center;
+}
+
+.emptyIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: rgb(var(--rgb-midnight) / 0.05);
+  color: var(--text-secondary);
+}
+
+.emptyTitle {
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.emptyText {
+  max-width: 340px;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 560px) {
+  .keys,
+  .shortcut {
+    display: none;
+  }
+
+  /* On phones the results span the screen under the app bar rather than hang off the field. */
+  .panel {
+    position: fixed;
+    top: calc(var(--console-bar-height) - 4px);
+    right: var(--space-4);
+    left: var(--space-4);
+    width: auto;
+  }
+}

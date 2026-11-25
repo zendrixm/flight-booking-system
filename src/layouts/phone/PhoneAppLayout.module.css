@@ -1,0 +1,23 @@
+.backdrop {
+  min-height: 100dvh;
+  background: rgb(var(--rgb-midnight) / 0.04);
+}
+
+.app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: var(--phone-app-max-width);
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: var(--surface-page);
+}
+
+@media (min-width: 481px) {
+  .app {
+    box-shadow:
+      1px 0 0 var(--divider),
+      -1px 0 0 var(--divider);
+  }
+}

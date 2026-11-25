@@ -1,0 +1,18 @@
+.session {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: 12px;
+  background: rgb(var(--rgb-midnight) / 0.04);
+  font-size: 13px;
+  color: rgb(var(--rgb-midnight) / 0.8);
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-spruce);
+}
