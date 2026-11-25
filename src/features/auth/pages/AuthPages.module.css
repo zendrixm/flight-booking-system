@@ -1,0 +1,22 @@
+.alternatives {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.alternativeButtons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.terms {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-secondary);
+}
+
+.terms a {
+  color: var(--text-primary);
+  text-underline-offset: 3px;
+}

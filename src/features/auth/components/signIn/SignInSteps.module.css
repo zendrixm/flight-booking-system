@@ -1,0 +1,148 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.stepTight {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  background: var(--surface-quiet);
+}
+
+.identityText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.identityLabel {
+  font: var(--type-label);
+  color: var(--text-muted);
+}
+
+.identityEmail {
+  overflow: hidden;
+  font-size: 15px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+}
+
+.textButton,
+.smallTextButton {
+  flex-shrink: 0;
+  padding: 0 var(--space-2);
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.textButton {
+  height: 36px;
+  font-size: 14px;
+}
+
+.smallTextButton {
+  height: 28px;
+  padding: 0;
+  font-size: 13px;
+}
+
+.centered {
+  align-self: center;
+}
+
+.centeredLink {
+  display: inline-flex;
+  align-self: center;
+  align-items: center;
+  height: 40px;
+  padding: 0 var(--space-2);
+  font-size: 14px;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.instructions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4) var(--space-4) var(--space-4) 36px;
+  border-radius: 14px;
+  background: var(--surface-quiet);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.instructions li::marker {
+  font-weight: 600;
+}
+
+.resendRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 14px;
+}
+
+.muted {
+  color: var(--text-secondary);
+}
+
+.resend {
+  height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-variant-numeric: tabular-nums;
+}
+
+.resend:disabled {
+  opacity: 0.4;
+  text-decoration: none;
+}
+
+.sent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) 14px;
+  border-radius: var(--radius-md);
+  background: rgb(var(--rgb-spruce) / 0.08);
+  color: var(--color-spruce);
+  font-size: 14px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.error {
+  display: flex;
+  gap: var(--space-2);
+  margin-top: -4px;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  color: var(--color-garnet);
+}
+
+.alertBody {
+  color: rgb(var(--rgb-midnight) / 0.8);
+}

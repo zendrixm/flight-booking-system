@@ -1,0 +1,143 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 640px;
+  padding: var(--gap);
+  border: 1px solid rgb(var(--rgb-midnight) / 0.12);
+  border-radius: var(--radius-dialog);
+}
+
+.cardTitle {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.scopes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tripNote {
+  display: flex;
+  gap: var(--space-3);
+  padding: 14px var(--space-4);
+  border-radius: 14px;
+  background: rgb(var(--rgb-brass) / 0.1);
+}
+
+.tripIcon {
+  flex-shrink: 0;
+  color: var(--color-brass);
+}
+
+.tripText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.tripTitle {
+  font-weight: 600;
+}
+
+.tripBody {
+  color: rgb(var(--rgb-midnight) / 0.8);
+}
+
+.tripBody a {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-underline-offset: 3px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: var(--space-1);
+}
+
+.signedOut {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--gap);
+}
+
+.done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  max-width: 560px;
+  padding-top: var(--gap);
+  text-align: center;
+}
+
+.doneIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-spruce) / 0.1);
+  color: var(--color-spruce);
+}
+
+.doneTitle {
+  font: 400 48px / 52px var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.doneText {
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--text-secondary);
+}
+
+.doneActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-top: var(--space-2);
+}
+
+.helpCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 760px;
+}
+
+.helpCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: 22px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+  text-decoration: none;
+}
+
+.helpCard:hover {
+  border-color: var(--border-strong);
+}
+
+.helpTitle {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.helpBody {
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--text-secondary);
+}
