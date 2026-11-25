@@ -1,0 +1,23 @@
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 0;
+}
+
+.noteLabel {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.quote {
+  margin: 0;
+  padding: var(--space-3) 14px;
+  border-left: 3px solid var(--border-control);
+  border-radius: 0 10px 10px 0;
+  background: var(--surface-quiet);
+  font-size: 14px;
+  line-height: 21px;
+}

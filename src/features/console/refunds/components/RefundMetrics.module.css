@@ -1,0 +1,45 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--gap);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--gap);
+  border: 1px solid var(--divider);
+  border-radius: var(--space-4);
+  background: var(--color-porcelain);
+}
+
+.label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.value {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.note {
+  font-size: 12px;
+}
+
+.neutral {
+  color: var(--text-secondary);
+}
+
+.success {
+  font-weight: 600;
+  color: var(--color-spruce);
+}
+
+.danger {
+  font-weight: 600;
+  color: var(--color-garnet);
+}
