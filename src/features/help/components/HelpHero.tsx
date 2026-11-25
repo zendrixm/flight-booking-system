@@ -59,6 +59,7 @@ export function HelpHero({ submittedQuery = '', isHome }: HelpHeroProps) {
             How can we <em>help?</em>
           </h1>
         )}
+        {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions -- Escape from the input or any suggestion link closes the list */}
         <form
           role="search"
           className={styles.searchArea}

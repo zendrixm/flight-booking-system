@@ -114,6 +114,7 @@ export function PasswordStep({
         label="Password"
         required
         autoComplete="current-password"
+        // eslint-disable-next-line jsx-a11y/no-autofocus -- the password step replaces the email step, so focus follows it
         autoFocus
         hint={
           <button type="button" className={styles.smallTextButton} onClick={onForgotPassword}>

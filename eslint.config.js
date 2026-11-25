@@ -28,6 +28,8 @@ export default tseslint.config(
       ],
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       eqeqeq: ['error', 'smart'],
+      // Option labels wrap their text in nested spans, one level past the default depth.
+      'jsx-a11y/label-has-associated-control': ['error', { depth: 3 }],
     },
   },
 );

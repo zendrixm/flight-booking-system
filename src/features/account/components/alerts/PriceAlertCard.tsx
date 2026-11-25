@@ -192,6 +192,7 @@ function TargetEditor({ initialTarget, isSaving, onCancel, onSave }: TargetEdito
         label="Target price"
         prefix="₱"
         inputMode="numeric"
+        // eslint-disable-next-line jsx-a11y/no-autofocus -- the editor opens on the user's Edit click, so focus follows it
         autoFocus
         value={value}
         error={isInvalid ? 'Enter an amount in pesos, or clear it.' : undefined}
