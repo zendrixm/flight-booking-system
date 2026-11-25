@@ -96,6 +96,7 @@ export function PlaceFields({
       <label className={clsx(fieldStyles.cell, isFrom ? styles.fromCell : styles.toCell)}>
         <span className={fieldStyles.eyebrow}>{isFrom ? fromLabel : 'To'}</span>
         <input
+          role="combobox"
           className={fieldStyles.value}
           value={place.query}
           autoComplete="off"

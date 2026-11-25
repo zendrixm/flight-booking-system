@@ -86,7 +86,14 @@ export function Menu({
       block={block}
       role="menu"
     >
-      <div ref={listRef} role="menu" aria-label={label} className={styles.menu} onKeyDown={moveFocus}>
+      <div
+        ref={listRef}
+        role="menu"
+        tabIndex={-1}
+        aria-label={label}
+        className={styles.menu}
+        onKeyDown={moveFocus}
+      >
         {intro}
         {header && <span className={styles.header}>{header}</span>}
         {items.map((entry) => {

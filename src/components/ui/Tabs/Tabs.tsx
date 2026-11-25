@@ -61,7 +61,13 @@ export function Tabs<Id extends string>({
 
   return (
     <div className={className}>
-      <div role="tablist" aria-label={label} className={styles.tabList} onKeyDown={handleKeyDown}>
+      <div
+        role="tablist"
+        tabIndex={-1}
+        aria-label={label}
+        className={styles.tabList}
+        onKeyDown={handleKeyDown}
+      >
         {items.map((item) => {
           const selected = item.id === value;
           return (

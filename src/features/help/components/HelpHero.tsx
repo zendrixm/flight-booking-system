@@ -77,7 +77,6 @@ export function HelpHero({ submittedQuery = '', isHome }: HelpHeroProps) {
               value={query}
               aria-label="Search help articles"
               aria-controls={showSuggestions ? 'help-suggestions' : undefined}
-              aria-expanded={showSuggestions}
               placeholder="Search for refunds, baggage, name changes…"
               className={styles.input}
               onChange={(event) => {
