@@ -1,0 +1,182 @@
+.figure {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.map {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: radial-gradient(
+    circle closest-side,
+    rgb(var(--rgb-brass) / 0.14),
+    rgb(var(--rgb-brass) / 0.05) 70%,
+    rgb(var(--rgb-brass) / 0)
+  );
+}
+
+.svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.grid {
+  fill: none;
+  stroke: rgb(var(--rgb-midnight) / 0.12);
+  stroke-width: 1;
+}
+
+.grid .axis {
+  stroke: rgb(var(--rgb-midnight) / 0.06);
+}
+
+/* ---------- Routes ---------- */
+.route {
+  fill: none;
+  stroke: rgb(var(--rgb-midnight) / 0.12);
+  stroke-width: 1.2;
+  stroke-dasharray: 2 5;
+  stroke-linecap: round;
+  transition: stroke var(--duration-fast) var(--ease-standard);
+}
+
+.routeVisible {
+  stroke: rgb(var(--rgb-brass) / 0.55);
+  stroke-dasharray: none;
+}
+
+.routeHighlighted {
+  stroke: var(--color-brass);
+  stroke-width: 2;
+}
+
+.dot {
+  fill: rgb(var(--rgb-midnight) / 0.28);
+  stroke: var(--color-porcelain);
+  stroke-width: 2;
+}
+
+.dotVisible {
+  fill: var(--color-brass);
+}
+
+.halo {
+  fill: rgb(var(--rgb-brass) / 0.18);
+}
+
+.origin {
+  fill: var(--color-midnight);
+  stroke: var(--color-porcelain);
+  stroke-width: 2;
+}
+
+.originHalo {
+  fill: rgb(var(--rgb-midnight) / 0.08);
+}
+
+/* ---------- Labels ---------- */
+.ringLabel,
+.label,
+.originLabel {
+  position: absolute;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.ringLabel {
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 1px 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-porcelain);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(var(--rgb-midnight) / 0.6);
+}
+
+.label {
+  font-size: 12px;
+  letter-spacing: var(--tracking-label);
+  font-variant-numeric: tabular-nums;
+}
+
+.right {
+  transform: translate(12px, -50%);
+}
+
+.left {
+  transform: translate(calc(-100% - 12px), -50%);
+}
+
+.below {
+  transform: translate(-50%, 10px);
+}
+
+.above {
+  transform: translate(-50%, calc(-100% - 10px));
+}
+
+.labelVisible {
+  font-weight: 600;
+  color: var(--color-midnight);
+}
+
+.labelDim {
+  font-weight: 500;
+  color: rgb(var(--rgb-midnight) / 0.4);
+}
+
+.labelHighlighted {
+  padding: 2px 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-porcelain);
+  box-shadow: 0 4px 14px rgb(var(--rgb-midnight) / 0.14);
+  font-weight: 700;
+}
+
+.originLabel {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 16px);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: var(--tracking-label);
+}
+
+/* ---------- Caption ---------- */
+.caption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px var(--space-4);
+  font: var(--type-caption);
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.noteDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brass);
+}
+
+@media (max-width: 760px) {
+  .label {
+    font-size: 11px;
+  }
+
+  .labelDim {
+    display: none;
+  }
+}
