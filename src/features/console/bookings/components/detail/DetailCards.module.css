@@ -1,0 +1,328 @@
+.rows {
+  list-style: none;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.strong {
+  font-weight: 600;
+}
+
+.muted {
+  font-size: 13px;
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+.small {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.nowrap {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.table thead tr {
+  background: rgb(var(--rgb-midnight) / 0.03);
+}
+
+.table tbody th {
+  font-weight: 400;
+}
+
+.table .number {
+  text-align: right;
+}
+
+/* ---------- Segments ---------- */
+.segment {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) 20px;
+  padding: var(--space-4) var(--gap);
+  border-top: 1px solid rgb(var(--rgb-midnight) / 0.06);
+}
+
+.segmentFlight {
+  flex: 0 0 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.segmentTimes {
+  flex: 1 1 220px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.airport {
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.segmentLine {
+  flex: 1 1 auto;
+  min-width: 16px;
+  height: 1px;
+  background: rgb(var(--rgb-midnight) / 0.2);
+}
+
+.segmentDetail {
+  flex: 0 1 150px;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+/* ---------- Travelers ---------- */
+.document {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.documentDot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: currentColor;
+}
+
+.documentValid {
+  color: var(--color-spruce);
+}
+
+.documentCheck .documentDot {
+  background: var(--color-brass);
+}
+
+/* ---------- Contact ---------- */
+.readOnly {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.contactGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.contactField {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.contactLabel {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.contactValue {
+  display: flex;
+  align-items: center;
+  min-height: 40px;
+  padding: 0 var(--space-3);
+  border-radius: 10px;
+  background: rgb(var(--rgb-midnight) / 0.04);
+  color: var(--text-secondary);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.contactPhone {
+  justify-content: space-between;
+  gap: var(--space-2);
+  padding-right: 4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.accountLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 40px;
+  font-size: 14px;
+  font-weight: 600;
+  text-underline-offset: 3px;
+}
+
+.auditNote {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ---------- Money ---------- */
+.money {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.moneyLine {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 14px;
+}
+
+.moneyLine dt {
+  color: var(--text-secondary);
+}
+
+.moneyLine dd {
+  font-weight: 500;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.credit dt,
+.credit dd {
+  color: var(--color-spruce);
+}
+
+.warningValue {
+  color: var(--color-garnet);
+}
+
+.moneyTotal {
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--divider);
+  font-size: 16px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Notes ---------- */
+.notes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border-radius: 12px;
+  background: rgb(var(--rgb-brass) / 0.08);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.saveNote {
+  align-self: flex-start;
+}
+
+/* ---------- Payments tab ---------- */
+.ledger {
+  flex: 999 1 560px;
+}
+
+.risk {
+  flex: 1 1 280px;
+}
+
+/* ---------- Tickets ---------- */
+.noTickets {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: var(--gap);
+  border-top: 1px solid var(--divider);
+}
+
+/* ---------- Activity ---------- */
+.activityCard {
+  padding: var(--gap);
+  border: 1px solid var(--divider);
+  border-radius: var(--space-4);
+  background: var(--color-porcelain);
+}
+
+.timeline {
+  list-style: none;
+}
+
+.event {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.eventRail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eventDot {
+  flex-shrink: 0;
+  width: 10px;
+  height: 10px;
+  margin-top: 5px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-midnight) / 0.4);
+}
+
+.brand {
+  background: var(--color-midnight);
+}
+
+.success {
+  background: var(--color-spruce);
+}
+
+.warning {
+  background: var(--color-brass);
+}
+
+.danger {
+  background: var(--color-garnet);
+}
+
+.eventLine {
+  flex: 1 1 auto;
+  width: 1px;
+  min-height: 20px;
+  background: rgb(var(--rgb-midnight) / 0.12);
+}
+
+.event:last-child .eventLine {
+  visibility: hidden;
+}
+
+.eventBody {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-1) var(--space-4);
+  padding-bottom: 20px;
+}
+
+.eventWhen {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
