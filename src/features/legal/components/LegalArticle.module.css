@@ -1,0 +1,120 @@
+.article {
+  flex: 1 1 560px;
+  min-width: 0;
+  max-width: 760px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title {
+  font: var(--type-display-m);
+}
+
+.updated {
+  font: var(--type-body-m);
+  color: var(--text-muted);
+}
+
+/* ---------- The short version ---------- */
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: var(--gap);
+  border: 1px solid rgb(var(--rgb-brass) / 0.32);
+  border-radius: 20px;
+  background: rgb(var(--rgb-brass) / 0.06);
+}
+
+.summaryTitle {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--color-brass);
+}
+
+.summaryList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.summaryPoint {
+  display: flex;
+  gap: var(--space-3);
+  font-size: 15px;
+  line-height: 23px;
+}
+
+.summaryIcon {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: var(--color-spruce);
+}
+
+/* ---------- Full text ---------- */
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--gap);
+  border-top: 1px solid var(--border-subtle);
+  scroll-margin-top: var(--gap);
+}
+
+.sectionTitle {
+  display: flex;
+  gap: var(--space-3);
+  font: var(--type-title-l);
+}
+
+.sectionNumber {
+  color: var(--color-brass);
+  font-variant-numeric: tabular-nums;
+}
+
+.paragraph {
+  font-size: 16px;
+  line-height: 27px;
+  color: rgb(var(--rgb-midnight) / 0.84);
+  text-wrap: pretty;
+}
+
+/* ---------- Next step ---------- */
+.callToAction {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--gap);
+  border-radius: 20px;
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+}
+
+.ctaText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  max-width: 460px;
+}
+
+.ctaTitle {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.ctaBody {
+  font-size: 14px;
+  line-height: 21px;
+  color: rgb(var(--rgb-porcelain) / 0.72);
+}

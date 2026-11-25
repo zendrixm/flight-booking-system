@@ -1,0 +1,61 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid rgb(var(--rgb-midnight) / 0.12);
+  border-radius: 20px;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 20px 20px var(--space-4);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.status,
+.unsaved {
+  font-size: 13px;
+}
+
+.status {
+  color: var(--text-secondary);
+}
+
+.unsaved {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.row {
+  padding: var(--space-4) 20px;
+  border-top: 1px solid var(--divider);
+}
+
+.locked {
+  background: rgb(var(--rgb-midnight) / 0.04);
+}
+
+.name {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
