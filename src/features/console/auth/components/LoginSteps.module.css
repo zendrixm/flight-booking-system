@@ -1,0 +1,190 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.attention {
+  background: rgb(var(--rgb-brass) / 0.16);
+  color: var(--color-midnight);
+}
+
+.danger {
+  background: rgb(var(--rgb-garnet) / 0.1);
+  color: var(--color-garnet);
+}
+
+.success {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-pill);
+  background: var(--color-spruce);
+  color: var(--color-porcelain);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.title {
+  font: 400 36px / 40px var(--font-serif);
+}
+
+.subtitle {
+  font: var(--type-body-m);
+  color: var(--text-secondary);
+  overflow-wrap: anywhere;
+}
+
+/* "Forgot password?" sits on the label row of the password field. */
+.passwordBlock {
+  position: relative;
+}
+
+.forgotLink {
+  position: absolute;
+  top: -4px;
+  right: 0;
+  z-index: 1;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.progress {
+  position: relative;
+  height: 6px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-midnight) / 0.08);
+}
+
+.progressBar {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 40%;
+  border-radius: var(--radius-pill);
+  background: var(--color-midnight);
+  animation: slide 1.1s ease-in-out infinite;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(-110%);
+  }
+
+  to {
+    transform: translateX(260%);
+  }
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  padding: 14px;
+  border-radius: 12px;
+  background: rgb(var(--rgb-midnight) / 0.04);
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+.noteTitle {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.footnote {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.textButton {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.textButton:disabled {
+  opacity: 0.4;
+}
+
+.resent {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-spruce);
+}
+
+.codeBlock {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.error {
+  display: flex;
+  gap: var(--space-2);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 17px;
+  color: var(--color-garnet);
+}
+
+.error svg {
+  flex-shrink: 0;
+}
+
+.recoveryInput {
+  height: 52px;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+  text-transform: uppercase;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .progressBar {
+    animation: none;
+  }
+}

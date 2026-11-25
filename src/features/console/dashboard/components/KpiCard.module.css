@@ -1,0 +1,70 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+  border: 1px solid var(--divider);
+  border-radius: var(--space-4);
+  background: var(--color-porcelain);
+}
+
+.label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.value {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  font-variant-numeric: tabular-nums;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+}
+
+.change {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.good {
+  color: var(--color-spruce);
+}
+
+.bad {
+  color: var(--color-garnet);
+}
+
+.comparison {
+  font-weight: 500;
+  color: var(--text-muted);
+}
+
+.sparkline {
+  /* Squeezes sideways on narrow cards rather than spilling out. */
+  flex: 0 1 72px;
+  min-width: 32px;
+  height: 24px;
+  overflow: visible;
+  fill: none;
+  stroke: var(--color-midnight);
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.72;
+}
+
+.sparkline path {
+  vector-effect: non-scaling-stroke;
+}

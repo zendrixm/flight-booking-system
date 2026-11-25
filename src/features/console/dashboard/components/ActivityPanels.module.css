@@ -1,0 +1,103 @@
+.rows {
+  list-style: none;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4) var(--gap);
+  border-top: 1px solid rgb(var(--rgb-midnight) / 0.06);
+}
+
+.linkRow {
+  color: var(--color-midnight);
+  text-decoration: none;
+}
+
+.linkRow:hover {
+  background: rgb(var(--rgb-midnight) / 0.025);
+}
+
+.linkRow:focus-visible {
+  outline-offset: -2px;
+}
+
+.text {
+  flex: 1 1 auto;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detail {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.detailCritical {
+  color: var(--color-garnet);
+}
+
+.count {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.critical {
+  background: rgb(var(--rgb-garnet) / 0.08);
+  color: var(--color-garnet);
+}
+
+.warning {
+  background: rgb(var(--rgb-brass) / 0.18);
+}
+
+.neutral {
+  background: rgb(var(--rgb-midnight) / 0.06);
+}
+
+.chevron {
+  flex-shrink: 0;
+  color: var(--text-muted);
+}
+
+/* ---------- Latest bookings ---------- */
+.table thead tr {
+  background: rgb(var(--rgb-midnight) / 0.03);
+}
+
+.reference {
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-underline-offset: 3px;
+}
+
+.muted {
+  color: var(--text-secondary);
+}
+
+.number {
+  text-align: right;
+}
+
+.table .number {
+  text-align: right;
+}
+
+.total {
+  font-weight: 600;
+}
