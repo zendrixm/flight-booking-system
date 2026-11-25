@@ -1,0 +1,88 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.title {
+  font: 400 64px / 68px var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+.cancelledTitle {
+  opacity: 0.4;
+  text-decoration: line-through;
+  text-decoration-thickness: 2px;
+}
+
+.tripLine {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.menuIntro {
+  padding: 10px var(--space-3) var(--space-2);
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.main {
+  display: flex;
+  flex: 999 1 600px;
+  flex-direction: column;
+  gap: var(--gap);
+  min-width: 0;
+}
+
+.aside {
+  display: flex;
+  flex: 1 1 320px;
+  flex-direction: column;
+  gap: var(--gap);
+  max-width: 400px;
+  min-width: 0;
+}
+
+@media (max-width: 1000px) {
+  .aside {
+    max-width: none;
+  }
+}
+
+@media (max-width: 760px) {
+  .title {
+    font: var(--type-page-title);
+  }
+}

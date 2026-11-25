@@ -1,0 +1,226 @@
+.step {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--gap);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+}
+
+.stepHeading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.stepTitle {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+}
+
+.stepSubtitle {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--text-secondary);
+}
+
+.initials {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-brass) / 0.16);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* Raised specificity so it wins over the kit's own ChoiceCard states. */
+.step .invalid {
+  border-color: var(--color-garnet);
+  background: rgb(var(--rgb-garnet) / 0.04);
+}
+
+.error {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-garnet);
+}
+
+.note {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+.note a,
+.inlineLink {
+  font-weight: 600;
+  color: var(--text-primary);
+  text-underline-offset: 3px;
+}
+
+.inlineLink {
+  font-size: 14px;
+}
+
+.passport {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  background: var(--surface-quiet);
+}
+
+.passportHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.source {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.passportFields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr));
+  gap: var(--space-3) var(--space-4);
+}
+
+.passportField {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.passportLabel {
+  font: var(--type-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.passportValue {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}
+
+.requirements {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.requirement {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.metDot,
+.todoDot {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  margin-top: 1px;
+  border-radius: var(--radius-pill);
+}
+
+.metDot {
+  background: var(--color-spruce);
+  color: var(--color-porcelain);
+}
+
+.todoDot {
+  background: rgb(var(--rgb-brass) / 0.24);
+  color: var(--color-midnight);
+}
+
+.requirementText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.requirementTitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.requirementDetail {
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-secondary);
+}
+
+.confirm {
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--divider);
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+  gap: var(--space-2);
+}
+
+.tile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: 14px;
+  border: 1px solid var(--border-subtle);
+  border-radius: 14px;
+}
+
+.tileText {
+  font-size: 13px;
+  line-height: 19px;
+  color: rgb(var(--rgb-midnight) / 0.8);
+}
+
+.textButton {
+  align-self: flex-start;
+  min-height: 32px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.declaration {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.declaration .dangerChoice:has(input:checked) {
+  border-color: var(--color-garnet);
+  background: rgb(var(--rgb-garnet) / 0.04);
+}
+
+@media (max-width: 560px) {
+  .step {
+    padding: 20px var(--space-4);
+  }
+}

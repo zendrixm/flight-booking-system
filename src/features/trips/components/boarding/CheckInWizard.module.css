@@ -1,0 +1,103 @@
+.wizard {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.progress {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.progressItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.bar {
+  height: 4px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-midnight) / 0.12);
+}
+
+.barDone {
+  background: var(--color-spruce);
+}
+
+.barCurrent {
+  background: var(--color-brass);
+}
+
+.doneLabel,
+.currentLabel,
+.upcomingLabel {
+  overflow: hidden;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.doneLabel {
+  color: var(--color-spruce);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.upcomingLabel {
+  color: rgb(var(--rgb-midnight) / 0.6);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap-reverse;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.notNow {
+  display: inline-flex;
+  align-items: center;
+  height: 48px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.notNow:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.forward {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.hint,
+.hintProblem {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.hintProblem {
+  font-weight: 500;
+  color: var(--color-garnet);
+}
+
+@media (max-width: 560px) {
+  .forward {
+    flex: 1 1 100%;
+    align-items: stretch;
+  }
+}

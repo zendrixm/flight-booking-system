@@ -1,0 +1,75 @@
+.route {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 14px var(--space-4);
+  border-radius: 14px;
+  background: var(--surface-quiet);
+}
+
+.routeText {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.routeName {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.routeMeta {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.travelers {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  float: left;
+  width: 100%;
+  margin-bottom: var(--space-2);
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-garnet);
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+  padding: 14px var(--space-4);
+  border-radius: 14px;
+  background: var(--surface-quiet);
+  font-size: 14px;
+}
+
+.summaryText {
+  color: var(--text-secondary);
+}
+
+.fare {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}

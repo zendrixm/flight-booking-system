@@ -1,0 +1,106 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  width: 100%;
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.main {
+  display: flex;
+  flex: 1 1 440px;
+  flex-direction: column;
+  gap: var(--gap);
+  min-width: 0;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font: 400 56px / 60px var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+}
+
+.passColumn {
+  display: flex;
+  flex: 0 1 420px;
+  flex-direction: column;
+  gap: var(--gap);
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+.passFrame {
+  position: relative;
+}
+
+.locked {
+  opacity: 0.12;
+  filter: blur(2px);
+}
+
+.lockOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: 32px;
+  text-align: center;
+}
+
+.lockIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  background: var(--color-porcelain);
+  box-shadow: var(--shadow-1);
+}
+
+.lockText {
+  max-width: 260px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+}
+
+.passActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.passAction {
+  flex: 1 1 140px;
+}
+
+@media (max-width: 560px) {
+  .title {
+    font-size: 40px;
+    line-height: 44px;
+  }
+}

@@ -1,0 +1,293 @@
+/* Shared look of the cards on the Manage booking page. */
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: var(--gap);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+}
+
+.flush {
+  gap: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2) var(--space-4);
+}
+
+.title {
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+.flushTitle {
+  padding: var(--space-5) var(--gap);
+  border-bottom: 1px solid var(--divider);
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.linkButton {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.linkButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.note {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2) var(--space-4);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.noteLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ---------- Flights ---------- */
+.flight {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--gap);
+  padding: var(--space-5) var(--gap);
+}
+
+.flight + .flight {
+  border-top: 1px solid var(--divider);
+}
+
+.flightWhen {
+  display: flex;
+  flex: 0 0 120px;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.kind {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.date {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.changed {
+  align-self: flex-start;
+  margin-top: var(--space-1);
+  padding: 2px var(--space-2);
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-brass) / 0.16);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.flightTimes {
+  display: flex;
+  flex: 1 1 260px;
+  align-items: center;
+  gap: var(--space-4);
+  font-variant-numeric: tabular-nums;
+}
+
+.endpoint {
+  display: flex;
+  flex-direction: column;
+}
+
+.endpointEnd {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.time {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.airport {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.line {
+  flex: 1 1 auto;
+  height: 1px;
+  background: rgb(var(--rgb-midnight) / 0.2);
+}
+
+.flightMeta {
+  flex: 0 1 200px;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-secondary);
+}
+
+/* ---------- Travelers ---------- */
+.traveler {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--divider);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(176px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.fieldLabel {
+  font: var(--type-label);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.fieldBox,
+.fieldLocked {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  min-height: var(--touch-target);
+  padding: 0 14px;
+  border: 1px solid rgb(var(--rgb-midnight) / 0.12);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.fieldLocked {
+  border-color: transparent;
+  background: var(--surface-quiet);
+  color: var(--text-secondary);
+}
+
+.fieldValue {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* ---------- Contact ---------- */
+.contactList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
+  gap: var(--space-4);
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+}
+
+.contactItem dd {
+  font-size: 15px;
+  font-weight: 500;
+  overflow-wrap: anywhere;
+}
+
+/* ---------- Aside ---------- */
+.rule {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.ruleIcon {
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ruleGood {
+  color: var(--color-spruce);
+}
+
+.ruleText {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.ruleTitle {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.ruleBody {
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--text-secondary);
+}
+
+.payment,
+.refund {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 14px;
+}
+
+.payment span:last-child,
+.refund span:last-child {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.refund {
+  color: var(--color-spruce);
+}
+
+.paymentLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-1) var(--space-5);
+}
