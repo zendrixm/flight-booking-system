@@ -1,0 +1,164 @@
+/*
+ * Vela design tokens.
+ *
+ * Five colours only. States never introduce new hues: they change the opacity of one of the five,
+ * so every token below is either a palette colour or the palette at a documented opacity step
+ * (100 · 72 · 68 · 40 · 16 · 12 · 10 · 6 · 4 %).
+ *
+ * Spacing follows one rule: 24px between components everywhere (16px on the phone app),
+ * 16px between groups inside a card, 8px from a label to its field.
+ */
+
+:root {
+  /* ---------- Palette ---------- */
+  --rgb-midnight: 14 27 44;
+  --rgb-porcelain: 249 249 246;
+  --rgb-brass: 168 132 78;
+  --rgb-spruce: 47 106 87;
+  --rgb-garnet: 162 59 63;
+
+  --color-midnight: rgb(var(--rgb-midnight));
+  --color-porcelain: rgb(var(--rgb-porcelain));
+  --color-brass: rgb(var(--rgb-brass));
+  --color-spruce: rgb(var(--rgb-spruce));
+  --color-garnet: rgb(var(--rgb-garnet));
+
+  /* ---------- Semantic colour (light surfaces) ---------- */
+  --text-primary: var(--color-midnight);
+  --text-secondary: rgb(var(--rgb-midnight) / 0.72);
+  --text-muted: rgb(var(--rgb-midnight) / 0.68);
+  --text-on-dark: var(--color-porcelain);
+  --text-on-dark-secondary: rgb(var(--rgb-porcelain) / 0.72);
+
+  --surface-page: var(--color-porcelain);
+  --surface-dark: var(--color-midnight);
+  --surface-quiet: rgb(var(--rgb-midnight) / 0.04);
+  --surface-hover: rgb(var(--rgb-midnight) / 0.06);
+  --surface-selected: rgb(var(--rgb-midnight) / 0.1);
+  --surface-attention: rgb(var(--rgb-brass) / 0.14);
+  --surface-success: rgb(var(--rgb-spruce) / 0.08);
+  --surface-danger: rgb(var(--rgb-garnet) / 0.06);
+  --surface-console: rgb(var(--rgb-midnight) / 0.04);
+
+  --border-subtle: rgb(var(--rgb-midnight) / 0.1);
+  --border-control: rgb(var(--rgb-midnight) / 0.16);
+  --border-strong: rgb(var(--rgb-midnight) / 0.32);
+  --border-on-dark: rgb(var(--rgb-porcelain) / 0.16);
+  --divider: rgb(var(--rgb-midnight) / 0.08);
+
+  --overlay-scrim: rgb(var(--rgb-midnight) / 0.48);
+
+  /* ---------- Typography ---------- */
+  --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-serif: 'Instrument Serif', 'Iowan Old Style', Georgia, serif;
+
+  --type-display-xl: 400 80px / 84px var(--font-serif);
+  --type-display-l: 400 56px / 60px var(--font-serif);
+  --type-page-title: 400 48px / 52px var(--font-serif);
+  --type-display-m: 400 40px / 44px var(--font-serif);
+  --type-heading: 400 28px / 32px var(--font-serif);
+  --type-title-l: 600 20px / 28px var(--font-sans);
+  --type-title-m: 600 16px / 24px var(--font-sans);
+  --type-body-l: 400 16px / 24px var(--font-sans);
+  --type-body-m: 400 14px / 20px var(--font-sans);
+  --type-caption: 400 13px / 19px var(--font-sans);
+  --type-label: 600 12px / 16px var(--font-sans);
+  --tracking-label: 0.08em;
+
+  /* ---------- Spacing ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-12: 48px;
+
+  /** The single gap between components, sections, columns and the page edge. */
+  --gap: var(--space-6);
+  --gap-inside-card: var(--space-4);
+  --gap-label: var(--space-2);
+  /** Field labels are one 18px line; buttons that sit beside a field drop by this much to align with it. */
+  --field-label-line-height: 18px;
+  --field-label-offset: calc(var(--field-label-line-height) + var(--gap-label));
+
+  /* ---------- Radius ---------- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-card: 16px;
+  --radius-panel: 20px;
+  --radius-dialog: 24px;
+  --radius-pill: 999px;
+
+  /* ---------- Elevation ---------- */
+  --shadow-1: 0 8px 24px rgb(var(--rgb-midnight) / 0.08);
+  --shadow-2: 0 24px 64px rgb(var(--rgb-midnight) / 0.16);
+  --shadow-3: 0 24px 80px rgb(var(--rgb-midnight) / 0.32);
+  --shadow-toast: 0 16px 40px rgb(var(--rgb-midnight) / 0.3);
+
+  /* ---------- Controls (comfortable density: customer site) ---------- */
+  --control-height: 48px;
+  --control-radius: 12px;
+  --control-font-size: 15px;
+  --control-padding-x: 16px;
+  --button-height: 44px;
+  --button-radius: var(--radius-pill);
+  --button-font-size: 14px;
+  --touch-target: 44px;
+
+  /* ---------- Layout ---------- */
+  --content-max-width: 1280px;
+  --site-bar-height: 72px;
+  --console-bar-height: 64px;
+  --console-sidebar-width: 264px;
+  --console-rail-width: 72px;
+  --console-drawer-width: 288px;
+  /** The phone app is one column; wider screens show it centred at this width. */
+  --phone-app-max-width: 480px;
+
+  /* ---------- Motion ---------- */
+  --duration-fast: 160ms;
+  --duration-medium: 200ms;
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+
+  /* ---------- Layers ---------- */
+  --z-sticky: 20;
+  --z-popover: 30;
+  --z-floating: 40;
+  --z-app-bar: 50;
+  --z-drawer: 60;
+  --z-dialog: 80;
+  --z-toast: 90;
+
+  /* ---------- Toasts ---------- */
+  --toast-offset: var(--gap);
+}
+
+@media (max-width: 560px) {
+  :root {
+    --toast-offset: var(--space-4);
+  }
+}
+
+/* Screens with a bar pinned to the bottom (the phone app's tab bar) lift toasts above it. */
+:root:has([data-bottom-bar]) {
+  --toast-offset: 96px;
+}
+
+/* Vela Console is denser: 40px controls with 10px corners. */
+[data-density='compact'] {
+  --control-height: 40px;
+  --control-radius: 10px;
+  --control-font-size: 14px;
+  --control-padding-x: 12px;
+  --button-height: 40px;
+  --button-radius: 10px;
+  --button-font-size: 13px;
+  --touch-target: 40px;
+}
+
+/* The phone app applies the same single-gap rule at 16px. */
+[data-platform='phone'] {
+  --gap: var(--space-4);
+}
