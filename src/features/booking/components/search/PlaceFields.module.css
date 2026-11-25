@@ -1,0 +1,48 @@
+.places {
+  flex: 2 1 440px;
+}
+
+.fromCell {
+  padding-right: 32px;
+}
+
+.toCell {
+  padding-left: 32px;
+}
+
+.swap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgb(var(--rgb-midnight) / 0.12);
+  border-radius: var(--radius-pill);
+  background: var(--color-porcelain);
+  box-shadow: 0 2px 8px rgb(var(--rgb-midnight) / 0.08);
+  transform: translate(-50%, -50%);
+}
+
+.swap:hover {
+  border-color: var(--color-midnight);
+}
+
+.pickerFrom {
+  left: 0;
+  width: 400px;
+}
+
+.pickerTo {
+  left: calc(50% - 8px);
+  width: 400px;
+}
+
+@media (max-width: 760px) {
+  .pickerTo {
+    left: 0;
+  }
+}

@@ -1,0 +1,111 @@
+/* Shared look of the big search boxes (place, date, multi-city). */
+.box {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  border-radius: var(--radius-card);
+  background: var(--surface-quiet);
+}
+
+.boxInvalid {
+  background: rgb(var(--rgb-garnet) / 0.04);
+  box-shadow: inset 0 0 0 1.5px var(--color-garnet);
+}
+
+.cell {
+  display: flex;
+  flex: 1 1 0;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  min-width: 0;
+  padding: 14px 20px;
+  border: 0;
+  border-radius: var(--radius-card);
+  background: transparent;
+  color: var(--text-primary);
+  text-align: left;
+  cursor: pointer;
+}
+
+.cell:focus-within {
+  box-shadow: inset 0 0 0 2px var(--color-midnight);
+}
+
+button.cell:hover:not(:disabled) {
+  box-shadow: inset 0 0 0 1px rgb(var(--rgb-midnight) / 0.24);
+}
+
+button.cell:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--color-midnight);
+}
+
+.cellActive,
+button.cellActive:hover:not(:disabled) {
+  background: var(--color-porcelain);
+  box-shadow: inset 0 0 0 2px var(--color-midnight);
+}
+
+.cell:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.value {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 26px;
+  white-space: nowrap;
+}
+
+.value:focus {
+  outline: none;
+}
+
+.sub {
+  max-width: 100%;
+  overflow: hidden;
+  font-size: 13px;
+  color: var(--text-muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.divider {
+  flex: 0 0 1px;
+  margin: 14px 0;
+  background: rgb(var(--rgb-midnight) / 0.12);
+}
+
+.panel {
+  position: absolute;
+  top: calc(100% + 8px);
+  z-index: var(--z-popover);
+  max-width: calc(100vw - 48px);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-card);
+  background: var(--color-porcelain);
+  box-shadow: 0 24px 64px rgb(var(--rgb-midnight) / 0.18);
+}
+
+@media (max-width: 760px) {
+  .value {
+    font-size: 17px;
+  }
+}

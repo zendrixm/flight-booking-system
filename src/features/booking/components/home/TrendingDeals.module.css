@@ -1,0 +1,204 @@
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font: var(--type-page-title);
+  letter-spacing: -0.01em;
+}
+
+.description {
+  font-size: 15px;
+  line-height: 24px;
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap);
+}
+
+/* ---------- Featured card ---------- */
+
+.featured {
+  position: relative;
+  display: flex;
+  flex: 1.25 1 520px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--gap);
+  min-height: 340px;
+  overflow: hidden;
+  padding: var(--gap);
+  border-radius: var(--radius-dialog);
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+  text-decoration: none;
+  transition: box-shadow var(--duration-medium) var(--ease-standard);
+}
+
+.featured:hover {
+  box-shadow: 0 24px 48px rgb(var(--rgb-midnight) / 0.24);
+}
+
+.featuredArt {
+  position: absolute;
+  top: 20px;
+  right: -20px;
+}
+
+.tags {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tag,
+.tagAccent {
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  padding: 0 12px;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-porcelain) / 0.1);
+  font: var(--type-label);
+  letter-spacing: 0.06em;
+}
+
+.tagAccent {
+  background: rgb(var(--rgb-brass) / 0.24);
+}
+
+.featuredFooter {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--gap);
+}
+
+.featuredPlace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.featuredCity {
+  font: 400 72px / 72px var(--font-serif);
+  letter-spacing: -0.02em;
+}
+
+.featuredBlurb {
+  font-size: 15px;
+  color: var(--text-on-dark-secondary);
+}
+
+.price {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.priceLabel {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.featured .priceLabel {
+  color: var(--text-on-dark-secondary);
+}
+
+.featuredPrice {
+  font-size: 28px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------- Route cards ---------- */
+
+.routes {
+  display: flex;
+  flex: 1 1 400px;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+.route {
+  display: flex;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 102px;
+  padding: var(--gap);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+  background: var(--color-porcelain);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: border-color var(--duration-fast) var(--ease-standard);
+}
+
+.route:hover {
+  border-color: var(--border-strong);
+}
+
+.routePlace {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.routeCodes {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  color: var(--text-muted);
+}
+
+.routeCity {
+  font: 400 36px / 40px var(--font-serif);
+  letter-spacing: -0.01em;
+}
+
+.routeSummary {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.routePrice {
+  font-size: 20px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 760px) {
+  .featured {
+    min-height: 280px;
+  }
+
+  .featuredCity {
+    font: var(--type-page-title);
+  }
+}

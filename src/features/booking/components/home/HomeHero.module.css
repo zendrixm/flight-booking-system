@@ -1,0 +1,70 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-dark);
+  color: var(--text-on-dark);
+}
+
+/* The art sits under the app bar in the design, so it is pulled up by the bar's height. */
+.art {
+  position: absolute;
+  top: calc(-40px - var(--site-bar-height));
+  right: -40px;
+  pointer-events: none;
+}
+
+.inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+  padding: var(--gap) var(--gap) 144px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font: var(--type-label);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-brass);
+}
+
+.rule {
+  width: 24px;
+  height: 1px;
+  background: currentColor;
+}
+
+.title {
+  max-width: 760px;
+  font: var(--type-display-xl);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.accent {
+  color: var(--color-brass);
+}
+
+.lede {
+  max-width: 540px;
+  font-size: 18px;
+  line-height: 28px;
+  color: rgb(var(--rgb-porcelain) / 0.76);
+  text-wrap: pretty;
+}
+
+@media (max-width: 760px) {
+  .art {
+    right: -320px;
+    opacity: 0.35;
+  }
+
+  .title {
+    font: var(--type-page-title);
+  }
+}

@@ -1,0 +1,150 @@
+.card {
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-panel);
+  background: var(--color-porcelain);
+  transition:
+    border-color var(--duration-fast) var(--ease-standard),
+    box-shadow var(--duration-fast) var(--ease-standard);
+}
+
+.expanded {
+  border-color: var(--border-strong);
+  box-shadow: 0 12px 32px rgb(var(--rgb-midnight) / 0.08);
+}
+
+.summary {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--gap);
+  padding: var(--gap);
+}
+
+.legs {
+  display: flex;
+  flex: 1 1 480px;
+  flex-direction: column;
+  gap: var(--space-5);
+  min-width: 0;
+}
+
+.leg {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-3) var(--gap);
+}
+
+.airline {
+  display: flex;
+  flex: 0 0 176px;
+  align-items: center;
+  gap: var(--space-3);
+  min-width: 0;
+}
+
+.airlineText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.airlineName {
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.flightMeta {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.pricing {
+  display: flex;
+  flex: 1 0 180px;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+  max-width: 240px;
+  padding-left: var(--gap);
+  border-left: 1px solid var(--divider);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 6px;
+  min-height: 24px;
+}
+
+.price {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.from,
+.total {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.amount {
+  font-size: 26px;
+  line-height: 30px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.hideButton {
+  background: rgb(var(--rgb-midnight) / 0.06);
+}
+
+.fares {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--gap);
+  border-top: 1px solid var(--divider);
+  border-radius: 0 0 var(--radius-panel) var(--radius-panel);
+  background: rgb(var(--rgb-midnight) / 0.02);
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-8);
+  list-style: none;
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.detail {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.fareGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  gap: var(--gap);
+}
+
+@media (max-width: 760px) {
+  .airline {
+    flex-basis: 100%;
+  }
+
+  .pricing {
+    max-width: none;
+    padding-top: var(--space-4);
+    padding-left: 0;
+    border-top: 1px solid var(--divider);
+    border-left: 0;
+  }
+}

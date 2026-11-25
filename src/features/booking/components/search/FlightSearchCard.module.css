@@ -1,0 +1,96 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+  padding: var(--gap);
+  border: 1px solid var(--divider);
+  border-radius: var(--radius-dialog);
+  background: var(--color-porcelain);
+  box-shadow:
+    0 1px 2px rgb(var(--rgb-midnight) / 0.06),
+    0 24px 64px rgb(var(--rgb-midnight) / 0.16);
+}
+
+.topRow {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.flexible {
+  padding: 0 14px;
+}
+
+.travelersButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  height: 44px;
+  padding: 0 16px;
+  border: 1px solid var(--border-control);
+  border-radius: var(--radius-pill);
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.travelersButton:hover {
+  background: var(--surface-quiet);
+}
+
+.fieldsArea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.fieldsRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: var(--space-3);
+}
+
+.dates {
+  flex: 1.3 1 320px;
+}
+
+.searchButton {
+  display: inline-flex;
+  flex: 0.2 1 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 76px;
+  padding: 0 32px;
+  border: 0;
+  border-radius: var(--radius-card);
+  background: var(--color-midnight);
+  color: var(--color-porcelain);
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.searchButton:hover {
+  background: rgb(var(--rgb-midnight) / 0.88);
+}
+
+.errorList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

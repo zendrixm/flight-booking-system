@@ -1,0 +1,8 @@
+/* The search card overlaps the bottom of the hero. */
+.searchSection {
+  position: relative;
+  z-index: var(--z-sticky);
+  max-width: var(--content-max-width);
+  margin: -120px auto 0;
+  padding: 0 var(--gap);
+}

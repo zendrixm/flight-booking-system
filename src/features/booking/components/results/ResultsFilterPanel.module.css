@@ -1,0 +1,173 @@
+.panel {
+  display: flex;
+  flex: 1 1 260px;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 44px;
+  margin-bottom: var(--space-1);
+}
+
+.title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.headerActions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.reset {
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.reset:not(:disabled):hover {
+  background: transparent;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  min-width: 0;
+  margin: 0;
+  padding: var(--space-4) 0;
+  border: 0;
+  border-top: 1px solid var(--divider);
+}
+
+.sectionTitle {
+  float: left;
+  width: 100%;
+  margin-bottom: var(--space-2);
+  padding: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.priceHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.priceHeader .sectionTitle {
+  float: none;
+  width: auto;
+}
+
+.priceValue {
+  font-size: 14px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.range {
+  width: 100%;
+  height: 24px;
+  margin: 0;
+  accent-color: var(--color-midnight);
+}
+
+.rangeLabels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.windowGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
+}
+
+.windowTile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  padding: var(--space-3);
+  border: 1px solid rgb(var(--rgb-midnight) / 0.12);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.windowTile:hover {
+  background: var(--surface-quiet);
+}
+
+.windowTile:has(:checked) {
+  border: 1.5px solid var(--color-brass);
+  background: rgb(var(--rgb-brass) / 0.1);
+}
+
+.windowTile:has(:disabled) {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.windowTile:has(:focus-visible) {
+  outline: 2px solid var(--color-midnight);
+  outline-offset: 2px;
+}
+
+.windowLabel {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.windowRange {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.sheetOnly,
+.sheetBar {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .panel {
+    display: none;
+  }
+
+  .sheetOpen {
+    position: fixed;
+    inset: 0;
+    z-index: var(--z-drawer);
+    display: flex;
+    max-width: none;
+    overflow-y: auto;
+    padding: var(--space-4) 20px 0;
+    background: var(--color-porcelain);
+  }
+
+  .sheetOpen .sheetOnly {
+    display: inline-flex;
+  }
+
+  .sheetOpen .sheetBar {
+    position: sticky;
+    bottom: 0;
+    display: block;
+    margin-top: auto;
+    padding: var(--space-3) 0 var(--space-4);
+    background: var(--color-porcelain);
+  }
+}

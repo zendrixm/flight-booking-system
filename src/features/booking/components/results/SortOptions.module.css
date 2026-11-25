@@ -1,0 +1,48 @@
+.group {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(160px, 100%), 1fr));
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgb(var(--rgb-midnight) / 0.12);
+  border-radius: var(--radius-card);
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  padding: 14px 20px;
+  cursor: pointer;
+  transition: background-color var(--duration-fast) var(--ease-standard);
+}
+
+.option + .option {
+  border-left: 1px solid rgb(var(--rgb-midnight) / 0.12);
+}
+
+.option:hover {
+  background: var(--surface-quiet);
+}
+
+.option:has(:checked) {
+  background: rgb(var(--rgb-midnight) / 0.05);
+  box-shadow: inset 0 -2px 0 var(--color-midnight);
+}
+
+.option:has(:focus-visible) {
+  outline: 2px solid var(--color-midnight);
+  outline-offset: -2px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-variant-numeric: tabular-nums;
+}

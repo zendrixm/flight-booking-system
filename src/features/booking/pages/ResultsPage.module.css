@@ -1,0 +1,79 @@
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap);
+}
+
+.results {
+  display: flex;
+  flex: 999 1 600px;
+  flex-direction: column;
+  gap: var(--gap);
+  min-width: 0;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.title {
+  font: var(--type-display-m);
+  letter-spacing: -0.01em;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.filterButton {
+  display: none;
+}
+
+/* Tracking is a confirmation, so it reads spruce rather than the default brass toggle. */
+.tracking[aria-pressed='true'] {
+  box-shadow: none;
+  border-color: rgb(var(--rgb-spruce) / 0.4);
+  background: rgb(var(--rgb-spruce) / 0.1);
+  color: var(--color-spruce);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  min-height: 240px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 760px) {
+  .filterButton {
+    display: inline-flex;
+  }
+}
