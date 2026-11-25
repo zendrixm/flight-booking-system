@@ -1,0 +1,168 @@
+.status {
+  align-self: flex-start;
+  margin-top: var(--space-1);
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.section + .section {
+  padding-top: var(--gap);
+  border-top: 1px solid var(--divider);
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: var(--space-3);
+  font-variant-numeric: tabular-nums;
+}
+
+.facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.facts dt {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.facts dd {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.aircraft {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.caption {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.sectionNote {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+
+.manifest,
+.connections,
+.timeline {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.manifest {
+  gap: var(--space-2);
+}
+
+.traveler {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: 10px var(--space-3);
+  border-radius: 10px;
+  background: rgb(var(--rgb-midnight) / 0.03);
+}
+
+.travelerText {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  font-size: 13px;
+  line-height: 19px;
+}
+
+.travelerText strong,
+.travelerName {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.travelerSummary {
+  color: var(--text-secondary);
+}
+
+.traveler .travelerSummary {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text-muted);
+}
+
+.reference,
+.referenceText {
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+}
+
+.reference {
+  text-underline-offset: 3px;
+}
+
+.referenceText {
+  color: var(--text-secondary);
+}
+
+.connections {
+  gap: var(--space-3);
+}
+
+.connection {
+  display: flex;
+  gap: 10px;
+}
+
+.connectionDot {
+  flex-shrink: 0;
+  width: 8px;
+  height: 8px;
+  margin-top: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-brass);
+}
+
+.timeline {
+  gap: var(--space-3);
+}
+
+.event {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.eventTime {
+  flex-shrink: 0;
+  width: 44px;
+  font-size: 13px;
+  line-height: 19px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 420px) {
+  .facts {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

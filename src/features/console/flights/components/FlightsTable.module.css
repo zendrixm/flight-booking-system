@@ -1,0 +1,123 @@
+.table thead tr {
+  background: rgb(var(--rgb-midnight) / 0.03);
+}
+
+/* Seven columns share the space beside the status panel, so cells sit closer than the default. */
+.table thead th,
+.table tbody td {
+  padding-right: var(--space-3);
+  padding-left: var(--space-3);
+}
+
+.table thead th:first-child,
+.table tbody td:first-child {
+  padding-left: 20px;
+}
+
+.table thead th:last-child,
+.table tbody td:last-child {
+  padding-right: 20px;
+}
+
+.table thead th {
+  white-space: nowrap;
+}
+
+.row {
+  cursor: pointer;
+}
+
+.row:hover {
+  background: rgb(var(--rgb-midnight) / 0.025);
+}
+
+.selected,
+.selected:hover {
+  background: rgb(var(--rgb-brass) / 0.1);
+}
+
+.departed {
+  color: var(--text-secondary);
+}
+
+.flight {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.flightButton {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-weight: 600;
+  white-space: nowrap;
+  text-decoration: underline;
+  text-decoration-color: rgb(var(--rgb-midnight) / 0.24);
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.flightButton:hover {
+  text-decoration-color: currentColor;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.times {
+  display: flex;
+  flex-direction: column;
+}
+
+.scheduledTime {
+  font-weight: 600;
+}
+
+/* The scheduled time no longer holds: struck through, with the new estimate under it. */
+.replacedTime {
+  text-decoration: line-through;
+  color: rgb(var(--rgb-midnight) / 0.6);
+}
+
+.estimate {
+  font-size: 12px;
+  white-space: nowrap;
+  color: var(--text-secondary);
+}
+
+.estimateDelayed {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.estimateCancelled {
+  color: var(--color-garnet);
+}
+
+.load {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.loadTrack {
+  width: 56px;
+  height: 6px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: rgb(var(--rgb-midnight) / 0.08);
+}
+
+.loadFill {
+  display: block;
+  height: 100%;
+  border-radius: var(--radius-pill);
+  background: var(--color-midnight);
+}
+
+.loadValue {
+  font-size: 12px;
+  color: var(--text-secondary);
+}

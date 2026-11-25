@@ -1,0 +1,207 @@
+.panel {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 420px;
+  border: 1px solid var(--divider);
+  border-radius: var(--space-4);
+  background: var(--color-porcelain);
+  scroll-margin-top: calc(var(--console-bar-height) + var(--space-4));
+}
+
+/* A Brass ring that fades out, pointing at the form after "Update status" in the drawer. */
+.highlighted {
+  animation: highlight 1.6s var(--ease-standard);
+}
+
+@keyframes highlight {
+  0%,
+  80% {
+    box-shadow: 0 0 0 2px var(--color-brass);
+  }
+
+  100% {
+    box-shadow: 0 0 0 2px transparent;
+  }
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: 20px var(--gap);
+  border-bottom: 1px solid var(--divider);
+}
+
+.summaryTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.flightNumber {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.meta {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--gap);
+  font-variant-numeric: tabular-nums;
+}
+
+.stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.stats dt {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.stats dd {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.detailsButton {
+  align-self: flex-start;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  padding: 20px var(--gap);
+}
+
+.caption {
+  font: var(--type-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.timeRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.lockIcon {
+  color: var(--text-muted);
+}
+
+.timeError {
+  display: flex;
+  gap: 6px;
+  margin-top: -6px;
+  font-size: 12px;
+  line-height: 17px;
+  font-weight: 500;
+  color: var(--color-garnet);
+}
+
+.timeError svg {
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.rebooking {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  min-width: 0;
+}
+
+.legend {
+  margin-bottom: 6px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.notify {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding: 14px;
+  border-radius: var(--space-3);
+  background: var(--surface-quiet);
+}
+
+/* Legends ignore flex gaps; float keeps it in the column's flow. */
+.notifyTitle {
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.notify:disabled .channel {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  accent-color: var(--color-midnight);
+  cursor: inherit;
+}
+
+.note {
+  font-size: 12px;
+  line-height: 18px;
+  color: var(--text-secondary);
+}
+
+.savedRegion:empty {
+  display: none;
+}
+
+.saved {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-spruce);
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.saveButton {
+  flex: 1 1 auto;
+}
+
+@media (max-width: 600px) {
+  .summary,
+  .form {
+    padding-left: var(--space-4);
+    padding-right: var(--space-4);
+  }
+}

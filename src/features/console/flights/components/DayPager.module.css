@@ -1,0 +1,20 @@
+.pager {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.day {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 176px;
+  height: var(--button-height);
+  padding: 0 14px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--control-radius);
+  background: var(--color-porcelain);
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}

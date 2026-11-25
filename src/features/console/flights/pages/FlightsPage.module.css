@@ -1,0 +1,54 @@
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-1) var(--space-3);
+}
+
+.feed {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.feedDot {
+  width: 8px;
+  height: 8px;
+  border-radius: var(--radius-pill);
+  background: var(--color-spruce);
+}
+
+.layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--gap);
+  transition: opacity var(--duration-fast) var(--ease-standard);
+}
+
+/* Another day is loading: keep this one readable but clearly stale. */
+.switching {
+  opacity: 0.56;
+  pointer-events: none;
+}
+
+.tableCard {
+  flex: 999 1 560px;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--divider);
+  border-radius: var(--space-4);
+  background: var(--color-porcelain);
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--gap);
+  text-align: center;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
